@@ -1,2 +1,2 @@
-# rewa-ewako
-Rewa is a humanoid robot created and maintained by EPROM PNUP.
+# Rewa
+Rewa is a 20 degrees of freedom humanoid robot created and maintained by EPROM PNUP.
