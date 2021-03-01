@@ -6,4 +6,4 @@ Rewa had participated twice in **The Indonesian National Robot Contest** (Humano
 CAD files for this robot can be found [here](https://grabcad.com/library/rewa-humanoid-robot-1) at **GrabCAD**.
 
 ## E-CAD Files
-TODO
+Electronic design files for this project are available [here](https://github.com/EPROM-PNUP/rewa-hardwares).
