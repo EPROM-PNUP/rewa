@@ -1,7 +1,7 @@
 # Rewa
 
 <p align="center">
-![E01 Rewa](https://github.com/EPROM-PNUP/rewa/blob/main/docs/MAIN-RENDER-1-small.png)
+<img src="docs/MAIN-RENDER-1-small.png">
 </p>
 
 Rewa is a 20 degrees of freedom humanoid robot created and maintained by **EPROM PNUP**. It is designed based on the **RoboCup Humanoid League** competition rules and laws of the game.
