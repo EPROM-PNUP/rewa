@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "rewa_motion")
 set(rewa_motion_VERSION "0.0.0")
-set(rewa_motion_MAINTAINER "wmhrdk <wmhrdk@todo.todo>")
+set(rewa_motion_MAINTAINER "Wahyu Mahardika <wahyumahrdk@outlook.com>")
 set(rewa_motion_PACKAGE_FORMAT "2")
 set(rewa_motion_BUILD_DEPENDS "roscpp" "rospy")
 set(rewa_motion_BUILD_EXPORT_DEPENDS "roscpp" "rospy")
