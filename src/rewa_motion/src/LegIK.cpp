@@ -1,5 +1,5 @@
 /*****************************************************************************/
-#include "LegIK.hpp"
+#include "rewa_motion/LegIK.hpp"
 #include <cmath>
 #include <vector>
 #include <iostream>

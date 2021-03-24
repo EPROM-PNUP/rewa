@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+rewa_motion/CMakeFiles/rewa_motion.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/rewa_motion.dir/rule
+.PHONY : rewa_motion/CMakeFiles/rewa_motion.dir/rule
+
+# Convenience name for target.
+rewa_motion: rewa_motion/CMakeFiles/rewa_motion.dir/rule
+
+.PHONY : rewa_motion
+
+# fast build rule for target.
+rewa_motion/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/build
+.PHONY : rewa_motion/fast
+
+# Convenience name for target.
 rewa_motion/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : rewa_motion/CMakeFiles/std_msgs_generate_messages_py.dir/rule
@@ -181,6 +196,21 @@ std_msgs_generate_messages_py: rewa_motion/CMakeFiles/std_msgs_generate_messages
 std_msgs_generate_messages_py/fast:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/std_msgs_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+rewa_motion/CMakeFiles/walk_engine.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/walk_engine.dir/rule
+.PHONY : rewa_motion/CMakeFiles/walk_engine.dir/rule
+
+# Convenience name for target.
+walk_engine: rewa_motion/CMakeFiles/walk_engine.dir/rule
+
+.PHONY : walk_engine
+
+# fast build rule for target.
+walk_engine/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/walk_engine.dir/build.make rewa_motion/CMakeFiles/walk_engine.dir/build
+.PHONY : walk_engine/fast
 
 # Convenience name for target.
 rewa_motion/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
@@ -392,6 +422,195 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+src/CubicSpline.o: src/CubicSpline.cpp.o
+
+.PHONY : src/CubicSpline.o
+
+# target to build an object file
+src/CubicSpline.cpp.o:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/CubicSpline.cpp.o
+.PHONY : src/CubicSpline.cpp.o
+
+src/CubicSpline.i: src/CubicSpline.cpp.i
+
+.PHONY : src/CubicSpline.i
+
+# target to preprocess a source file
+src/CubicSpline.cpp.i:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/CubicSpline.cpp.i
+.PHONY : src/CubicSpline.cpp.i
+
+src/CubicSpline.s: src/CubicSpline.cpp.s
+
+.PHONY : src/CubicSpline.s
+
+# target to generate assembly for a file
+src/CubicSpline.cpp.s:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/CubicSpline.cpp.s
+.PHONY : src/CubicSpline.cpp.s
+
+src/HumanoidModel.o: src/HumanoidModel.cpp.o
+
+.PHONY : src/HumanoidModel.o
+
+# target to build an object file
+src/HumanoidModel.cpp.o:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/HumanoidModel.cpp.o
+.PHONY : src/HumanoidModel.cpp.o
+
+src/HumanoidModel.i: src/HumanoidModel.cpp.i
+
+.PHONY : src/HumanoidModel.i
+
+# target to preprocess a source file
+src/HumanoidModel.cpp.i:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/HumanoidModel.cpp.i
+.PHONY : src/HumanoidModel.cpp.i
+
+src/HumanoidModel.s: src/HumanoidModel.cpp.s
+
+.PHONY : src/HumanoidModel.s
+
+# target to generate assembly for a file
+src/HumanoidModel.cpp.s:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/HumanoidModel.cpp.s
+.PHONY : src/HumanoidModel.cpp.s
+
+src/IKWalk.o: src/IKWalk.cpp.o
+
+.PHONY : src/IKWalk.o
+
+# target to build an object file
+src/IKWalk.cpp.o:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/IKWalk.cpp.o
+.PHONY : src/IKWalk.cpp.o
+
+src/IKWalk.i: src/IKWalk.cpp.i
+
+.PHONY : src/IKWalk.i
+
+# target to preprocess a source file
+src/IKWalk.cpp.i:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/IKWalk.cpp.i
+.PHONY : src/IKWalk.cpp.i
+
+src/IKWalk.s: src/IKWalk.cpp.s
+
+.PHONY : src/IKWalk.s
+
+# target to generate assembly for a file
+src/IKWalk.cpp.s:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/IKWalk.cpp.s
+.PHONY : src/IKWalk.cpp.s
+
+src/LegIK.o: src/LegIK.cpp.o
+
+.PHONY : src/LegIK.o
+
+# target to build an object file
+src/LegIK.cpp.o:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/LegIK.cpp.o
+.PHONY : src/LegIK.cpp.o
+
+src/LegIK.i: src/LegIK.cpp.i
+
+.PHONY : src/LegIK.i
+
+# target to preprocess a source file
+src/LegIK.cpp.i:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/LegIK.cpp.i
+.PHONY : src/LegIK.cpp.i
+
+src/LegIK.s: src/LegIK.cpp.s
+
+.PHONY : src/LegIK.s
+
+# target to generate assembly for a file
+src/LegIK.cpp.s:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/LegIK.cpp.s
+.PHONY : src/LegIK.cpp.s
+
+src/Polynom.o: src/Polynom.cpp.o
+
+.PHONY : src/Polynom.o
+
+# target to build an object file
+src/Polynom.cpp.o:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/Polynom.cpp.o
+.PHONY : src/Polynom.cpp.o
+
+src/Polynom.i: src/Polynom.cpp.i
+
+.PHONY : src/Polynom.i
+
+# target to preprocess a source file
+src/Polynom.cpp.i:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/Polynom.cpp.i
+.PHONY : src/Polynom.cpp.i
+
+src/Polynom.s: src/Polynom.cpp.s
+
+.PHONY : src/Polynom.s
+
+# target to generate assembly for a file
+src/Polynom.cpp.s:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/Polynom.cpp.s
+.PHONY : src/Polynom.cpp.s
+
+src/Spline.o: src/Spline.cpp.o
+
+.PHONY : src/Spline.o
+
+# target to build an object file
+src/Spline.cpp.o:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/Spline.cpp.o
+.PHONY : src/Spline.cpp.o
+
+src/Spline.i: src/Spline.cpp.i
+
+.PHONY : src/Spline.i
+
+# target to preprocess a source file
+src/Spline.cpp.i:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/Spline.cpp.i
+.PHONY : src/Spline.cpp.i
+
+src/Spline.s: src/Spline.cpp.s
+
+.PHONY : src/Spline.s
+
+# target to generate assembly for a file
+src/Spline.cpp.s:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/src/Spline.cpp.s
+.PHONY : src/Spline.cpp.s
+
+src/walk_engine.o: src/walk_engine.cpp.o
+
+.PHONY : src/walk_engine.o
+
+# target to build an object file
+src/walk_engine.cpp.o:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/walk_engine.dir/build.make rewa_motion/CMakeFiles/walk_engine.dir/src/walk_engine.cpp.o
+.PHONY : src/walk_engine.cpp.o
+
+src/walk_engine.i: src/walk_engine.cpp.i
+
+.PHONY : src/walk_engine.i
+
+# target to preprocess a source file
+src/walk_engine.cpp.i:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/walk_engine.dir/build.make rewa_motion/CMakeFiles/walk_engine.dir/src/walk_engine.cpp.i
+.PHONY : src/walk_engine.cpp.i
+
+src/walk_engine.s: src/walk_engine.cpp.s
+
+.PHONY : src/walk_engine.s
+
+# target to generate assembly for a file
+src/walk_engine.cpp.s:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_motion/CMakeFiles/walk_engine.dir/build.make rewa_motion/CMakeFiles/walk_engine.dir/src/walk_engine.cpp.s
+.PHONY : src/walk_engine.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -402,7 +621,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... rewa_motion"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... walk_engine"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
@@ -420,6 +641,27 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... src/CubicSpline.o"
+	@echo "... src/CubicSpline.i"
+	@echo "... src/CubicSpline.s"
+	@echo "... src/HumanoidModel.o"
+	@echo "... src/HumanoidModel.i"
+	@echo "... src/HumanoidModel.s"
+	@echo "... src/IKWalk.o"
+	@echo "... src/IKWalk.i"
+	@echo "... src/IKWalk.s"
+	@echo "... src/LegIK.o"
+	@echo "... src/LegIK.i"
+	@echo "... src/LegIK.s"
+	@echo "... src/Polynom.o"
+	@echo "... src/Polynom.i"
+	@echo "... src/Polynom.s"
+	@echo "... src/Spline.o"
+	@echo "... src/Spline.i"
+	@echo "... src/Spline.s"
+	@echo "... src/walk_engine.o"
+	@echo "... src/walk_engine.i"
+	@echo "... src/walk_engine.s"
 .PHONY : help
 
 

@@ -1,6 +1,6 @@
 #include <stdexcept>
 #include <algorithm>
-#include "CubicSpline.hpp"
+#include "rewa_motion/CubicSpline.hpp"
 
 namespace Leph {
 

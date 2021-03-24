@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named rewa_motion
+
+# Build rule for target.
+rewa_motion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion
+.PHONY : rewa_motion
+
+# fast build rule for target.
+rewa_motion/fast:
+	$(MAKE) -f rewa_motion/CMakeFiles/rewa_motion.dir/build.make rewa_motion/CMakeFiles/rewa_motion.dir/build
+.PHONY : rewa_motion/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -296,6 +309,19 @@ std_msgs_generate_messages_py: cmake_check_build_system
 std_msgs_generate_messages_py/fast:
 	$(MAKE) -f rewa_motion/CMakeFiles/std_msgs_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named walk_engine
+
+# Build rule for target.
+walk_engine: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 walk_engine
+.PHONY : walk_engine
+
+# fast build rule for target.
+walk_engine/fast:
+	$(MAKE) -f rewa_motion/CMakeFiles/walk_engine.dir/build.make rewa_motion/CMakeFiles/walk_engine.dir/build
+.PHONY : walk_engine/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_nodejs
@@ -501,7 +527,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... rewa_motion"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... walk_engine"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"

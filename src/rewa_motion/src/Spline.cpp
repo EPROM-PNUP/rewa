@@ -1,6 +1,6 @@
 #include <iomanip>
 #include <stdexcept>
-#include "Spline.hpp"
+#include "rewa_motion/Spline.hpp"
 
 namespace Leph {
 

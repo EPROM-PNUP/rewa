@@ -39,7 +39,9 @@
 /home/wmhrdk/Dev/rewa/build/rewa_motion/CMakeFiles/rebuild_cache.dir
 /home/wmhrdk/Dev/rewa/build/rewa_motion/CMakeFiles/edit_cache.dir
 /home/wmhrdk/Dev/rewa/build/rewa_motion/CMakeFiles/test.dir
+/home/wmhrdk/Dev/rewa/build/rewa_motion/CMakeFiles/rewa_motion.dir
 /home/wmhrdk/Dev/rewa/build/rewa_motion/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/wmhrdk/Dev/rewa/build/rewa_motion/CMakeFiles/walk_engine.dir
 /home/wmhrdk/Dev/rewa/build/rewa_motion/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 /home/wmhrdk/Dev/rewa/build/rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir
 /home/wmhrdk/Dev/rewa/build/rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir

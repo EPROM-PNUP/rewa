@@ -1,5 +1,5 @@
-#include "IKWalk.hpp"
-#include "CubicSpline.hpp"
+#include "rewa_motion/IKWalk.hpp"
+#include "rewa_motion/CubicSpline.hpp"
 
 namespace Rhoban {
 

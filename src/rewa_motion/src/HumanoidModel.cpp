@@ -1,4 +1,4 @@
-#include "HumanoidModel.hpp"
+#include "rewa_motion/HumanoidModel.hpp"
 
 namespace Leph {
 
