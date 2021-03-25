@@ -6,6 +6,44 @@
 
 #IncludeRegexTransform: 
 
+/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/Euler.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/LegJoint.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+rewa_msgs/Euler.h
+-
+rewa_msgs/Euler.h
+-
+rewa_msgs/Euler.h
+-
+
 /home/wmhrdk/Dev/rewa/src/rewa_motion/include/rewa_motion/HumanoidModel.hpp
 Eigen/Dense
 -
@@ -24,15 +62,17 @@ string
 cmath
 -
 
-/home/wmhrdk/Dev/rewa/src/rewa_motion/src/walk_engine.cpp
+/home/wmhrdk/Dev/rewa/src/rewa_motion/src/WalkEngine.cpp
 iostream
 -
 rewa_motion/IKWalk.hpp
-/home/wmhrdk/Dev/rewa/src/rewa_motion/src/rewa_motion/IKWalk.hpp
+-
 ros/ros.h
-/home/wmhrdk/Dev/rewa/src/rewa_motion/src/ros/ros.h
-std_msgs/String.h
-/home/wmhrdk/Dev/rewa/src/rewa_motion/src/std_msgs/String.h
+-
+rewa_msgs/LegJoint.h
+-
+ros/console.h
+-
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h
@@ -681,22 +721,6 @@ ros/forwards.h
 /opt/ros/noetic/include/ros/ros/forwards.h
 
 /opt/ros/noetic/include/rosconsole/macros_generated.h
-
-/opt/ros/noetic/include/std_msgs/String.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
 
 /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 ros/macros.h

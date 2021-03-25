@@ -1,7 +1,8 @@
 #include <iostream>
-#include "rewa_motion/IKWalk.hpp"
-#include "ros/ros.h"
-#include "std_msgs/String.h"
+#include <rewa_motion/IKWalk.hpp>
+#include <ros/ros.h>
+#include <rewa_msgs/LegJoint.h>
+#include <ros/console.h>
 
 
 class WalkEngine {
@@ -23,7 +24,7 @@ class WalkEngine {
 		time_ = time;
 		timeLength_ = timeLength;
 		
-		pub = nh.advertise<std_msgs::String>("/walking_state", 10);
+		pub = nh.advertise<rewa_msgs::LegJoint>("/leg_joint", 1);
 
 		params.distHipToKnee = 0.093;
 		params.distKneeToAnkle = 0.105;
@@ -72,10 +73,10 @@ class WalkEngine {
 	 */
 	void runWalk() {
 		//Publish Rate
-		ros::Rate rate(10);
+		ros::Rate rate(50);
 		
 		//Walking State Message
-		std_msgs::String walking_state;
+		rewa_msgs::LegJoint leg_joint;
 		//Leg motor computed positions
 		struct Rhoban::IKWalkOutputs outputs;
 		
@@ -94,6 +95,23 @@ class WalkEngine {
 					//(phase is not updated)
 					std::cout << time_ << " Inverse Kinematics error. Position not reachable." << std::endl;
 				} else {
+					ROS_DEBUG("TIME: %.4f PHASE: %.4f ", time_, phase_);
+					ROS_DEBUG("SERVO_POS: ");
+					ROS_DEBUG("L: %.4f %.4f %.4f %.4f %.4f %.4f",
+								outputs.left_hip_yaw, 
+								outputs.left_hip_pitch, 
+								outputs.left_hip_roll,
+								outputs.left_knee,
+								outputs.left_ankle_pitch,
+								outputs.left_ankle_roll);
+					ROS_DEBUG("R: %.4f %.4f %.4f %.4f %.4f %.4f",	
+								outputs.right_hip_yaw, 
+								outputs.right_hip_pitch, 
+								outputs.right_hip_roll,
+								outputs.right_knee,
+								outputs.right_ankle_pitch,
+								outputs.right_ankle_roll);
+					/*
 					std::cout << time_ << " ";
 					std::cout << phase_ << " ";
 					std::cout << outputs.left_hip_yaw << " ";
@@ -109,15 +127,27 @@ class WalkEngine {
 					std::cout << outputs.right_ankle_pitch << " ";
 					std::cout << outputs.right_ankle_roll << " ";
 					std::cout << std::endl;
+					*/
 
-					walking_state.data = "Walking";
 				}
+				
+				leg_joint.hip.y = (float)outputs.left_hip_yaw;
+				leg_joint.hip.p = (float)outputs.left_hip_pitch;
+				leg_joint.hip.r = (float)outputs.left_hip_roll;
+				leg_joint.knee.y = 0.0f;
+				leg_joint.knee.p = (float)outputs.left_knee;
+				leg_joint.knee.r = 0.0f;
+				leg_joint.ankle.y = 0.0f;
+				leg_joint.ankle.p = (float)outputs.left_ankle_pitch;
+				leg_joint.ankle.r = (float)outputs.left_ankle_roll;
 
-				pub.publish(walking_state);
+				pub.publish(leg_joint);
 
 				ros::spinOnce();
 				rate.sleep();
 			}
+
+			time_ = 0.0;
 		}
 	}
 };
