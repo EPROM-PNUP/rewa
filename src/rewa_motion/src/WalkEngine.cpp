@@ -9,7 +9,8 @@ class WalkEngine {
 
 	private:
 	
-	ros::Publisher pub;
+	ros::Publisher left_leg_joints_pub;
+	ros::Publisher right_leg_joints_pub;
 
 	struct Rhoban::IKWalkParameters params;
 
@@ -24,7 +25,8 @@ class WalkEngine {
 		time_ = time;
 		timeLength_ = timeLength;
 		
-		pub = nh.advertise<rewa_msgs::LegJoint>("/leg_joint", 1);
+		left_leg_joints_pub = nh.advertise<rewa_msgs::LegJoint>("/left_leg_joints", 1);
+		right_leg_joints_pub = nh.advertise<rewa_msgs::LegJoint>("/right_leg_joints", 1);
 
 		params.distHipToKnee = 0.093;
 		params.distKneeToAnkle = 0.105;
@@ -67,33 +69,28 @@ class WalkEngine {
 		
 	}
 
-	/**
-	 * Run the walk for given among of time and update
-	 * phase and time state
-	 */
 	void runWalk() {
-		//Publish Rate
 		ros::Rate rate(50);
 		
-		//Walking State Message
-		rewa_msgs::LegJoint leg_joint;
-		//Leg motor computed positions
+		rewa_msgs::LegJoint left_leg_joints;
+		rewa_msgs::LegJoint right_leg_joints;
+		
 		struct Rhoban::IKWalkOutputs outputs;
 		
-		//Walk engine frequency
 		double engineFrequency = 50.0;
+
 		while(ros::ok()) {
 			for (double t=0.0;t<=timeLength_;t+=1.0/engineFrequency) {
 				time_ += 1.0/engineFrequency;
+				
 				bool success = Rhoban::IKWalk::walk(
-					params, //Walk parameters
-					1.0/engineFrequency, //Time step
-					phase_, //Current walk phase -will be updated)
-					outputs); //Result target position (updated)
+					params, 
+					1.0/engineFrequency, 
+					phase_, 
+					outputs); 
+				
 				if (!success) {
-					//The requested position for left or right foot is not feasible
-					//(phase is not updated)
-					std::cout << time_ << " Inverse Kinematics error. Position not reachable." << std::endl;
+					ROS_DEBUG("%.4f Inverse Kinematics error. Position not reachable\n", time_);
 				} else {
 					ROS_DEBUG("TIME: %.4f PHASE: %.4f ", time_, phase_);
 					ROS_DEBUG("SERVO_POS: ");
@@ -111,37 +108,30 @@ class WalkEngine {
 								outputs.right_knee,
 								outputs.right_ankle_pitch,
 								outputs.right_ankle_roll);
-					/*
-					std::cout << time_ << " ";
-					std::cout << phase_ << " ";
-					std::cout << outputs.left_hip_yaw << " ";
-					std::cout << outputs.left_hip_pitch << " ";
-					std::cout << outputs.left_hip_roll << " ";
-					std::cout << outputs.left_knee << " ";
-					std::cout << outputs.left_ankle_pitch << " ";
-					std::cout << outputs.left_ankle_roll << " ";
-					std::cout << outputs.right_hip_yaw << " ";
-					std::cout << outputs.right_hip_pitch << " ";
-					std::cout << outputs.right_hip_roll << " ";
-					std::cout << outputs.right_knee << " ";
-					std::cout << outputs.right_ankle_pitch << " ";
-					std::cout << outputs.right_ankle_roll << " ";
-					std::cout << std::endl;
-					*/
-
 				}
 				
-				leg_joint.hip.y = (float)outputs.left_hip_yaw;
-				leg_joint.hip.p = (float)outputs.left_hip_pitch;
-				leg_joint.hip.r = (float)outputs.left_hip_roll;
-				leg_joint.knee.y = 0.0f;
-				leg_joint.knee.p = (float)outputs.left_knee;
-				leg_joint.knee.r = 0.0f;
-				leg_joint.ankle.y = 0.0f;
-				leg_joint.ankle.p = (float)outputs.left_ankle_pitch;
-				leg_joint.ankle.r = (float)outputs.left_ankle_roll;
+				left_leg_joints.hip.y = (float)outputs.left_hip_yaw;
+				left_leg_joints.hip.p = (float)outputs.left_hip_pitch;
+				left_leg_joints.hip.r = (float)outputs.left_hip_roll;
+				left_leg_joints.knee.y = 0.0f;
+				left_leg_joints.knee.p = (float)outputs.left_knee;
+				left_leg_joints.knee.r = 0.0f;
+				left_leg_joints.ankle.y = 0.0f;
+				left_leg_joints.ankle.p = (float)outputs.left_ankle_pitch;
+				left_leg_joints.ankle.r = (float)outputs.left_ankle_roll;
 
-				pub.publish(leg_joint);
+				right_leg_joints.hip.y = (float)outputs.right_hip_yaw;
+				right_leg_joints.hip.p = (float)outputs.right_hip_pitch;
+				right_leg_joints.hip.r = (float)outputs.right_hip_roll;
+				right_leg_joints.knee.y = 0.0f;
+				right_leg_joints.knee.p = (float)outputs.right_knee;
+				right_leg_joints.knee.r = 0.0f;
+				right_leg_joints.ankle.y = 0.0f;
+				right_leg_joints.ankle.p = (float)outputs.right_ankle_pitch;
+				right_leg_joints.ankle.r = (float)outputs.right_ankle_roll;
+
+				left_leg_joints_pub.publish(left_leg_joints);
+				right_leg_joints_pub.publish(right_leg_joints);
 
 				ros::spinOnce();
 				rate.sleep();

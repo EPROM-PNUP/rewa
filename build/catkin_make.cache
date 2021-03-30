@@ -1,2 +1,2 @@
-rewa_motion:rewa_msgs
+rewa_hardware:rewa_motion:rewa_msgs
 -DCATKIN_DEVEL_PREFIX=/home/wmhrdk/Dev/rewa/devel -DCMAKE_INSTALL_PREFIX=/home/wmhrdk/Dev/rewa/install -G Unix Makefiles

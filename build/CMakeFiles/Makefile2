@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = /home/wmhrdk/Dev/rewa/build
 # The main recursive "all" target.
 all: gtest/all
 all: rewa_msgs/all
+all: rewa_hardware/all
 all: rewa_motion/all
 
 .PHONY : all
@@ -62,6 +63,7 @@ all: rewa_motion/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: rewa_msgs/preinstall
+preinstall: rewa_hardware/preinstall
 preinstall: rewa_motion/preinstall
 
 .PHONY : preinstall
@@ -74,6 +76,7 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: rewa_msgs/clean
+clean: rewa_hardware/clean
 clean: rewa_motion/clean
 
 .PHONY : clean
@@ -136,6 +139,36 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googletest/clean
 
 #=============================================================================
+# Directory level rules for directory rewa_hardware
+
+# Recursive "all" directory target.
+rewa_hardware/all: rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/all
+rewa_hardware/all: rewa_hardware/CMakeFiles/dynamixel_mx28.dir/all
+
+.PHONY : rewa_hardware/all
+
+# Recursive "preinstall" directory target.
+rewa_hardware/preinstall:
+
+.PHONY : rewa_hardware/preinstall
+
+# Recursive "clean" directory target.
+rewa_hardware/clean: rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/dynamixel_mx28.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+rewa_hardware/clean: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+.PHONY : rewa_hardware/clean
+
+#=============================================================================
 # Directory level rules for directory rewa_motion
 
 # Recursive "all" directory target.
@@ -150,17 +183,7 @@ rewa_motion/preinstall:
 .PHONY : rewa_motion/preinstall
 
 # Recursive "clean" directory target.
-rewa_motion/clean: rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-rewa_motion/clean: rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-rewa_motion/clean: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-rewa_motion/clean: rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/clean
-rewa_motion/clean: rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-rewa_motion/clean: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-rewa_motion/clean: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 rewa_motion/clean: rewa_motion/CMakeFiles/walk_engine.dir/clean
-rewa_motion/clean: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-rewa_motion/clean: rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-rewa_motion/clean: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 rewa_motion/clean: rewa_motion/CMakeFiles/IKWalk.dir/clean
 
 .PHONY : rewa_motion/clean
@@ -343,7 +366,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=10,11 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=14,15 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -370,7 +393,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=8,9 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=12,13 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -397,7 +420,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=14,15 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=18,19 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -424,7 +447,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=12,13 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=16,17 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -480,7 +503,7 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/all: rewa_msgs/CMake
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/all: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_LegJoint.dir/all
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=23,24 "Built target rewa_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=27,28 "Built target rewa_msgs_generate_messages_nodejs"
 .PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -698,7 +721,7 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/all: rewa_msgs/CMakeFil
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/all: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_LegJoint.dir/all
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=18,19,20 "Built target rewa_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=22,23,24 "Built target rewa_msgs_generate_messages_eus"
 .PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -812,7 +835,7 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/all: rewa_msgs/CMakeFil
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/all: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_LegJoint.dir/all
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=16,17 "Built target rewa_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=20,21 "Built target rewa_msgs_generate_messages_cpp"
 .PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -841,7 +864,7 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_py.dir/all: rewa_msgs/CMakeFile
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_py.dir/all: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_LegJoint.dir/all
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_py.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_py.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=25,26,27 "Built target rewa_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=29,30,31 "Built target rewa_msgs_generate_messages_py"
 .PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -924,7 +947,7 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/all: rewa_msgs/CMakeFi
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/all: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_LegJoint.dir/all
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=21,22 "Built target rewa_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=25,26 "Built target rewa_msgs_generate_messages_lisp"
 .PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -945,193 +968,328 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/clean:
 .PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir
+# Target rules for target rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir
 
 # All Build rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_cpp: rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+roscpp_generate_messages_cpp: rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 .PHONY : roscpp_generate_messages_cpp
 
 # clean rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir
+# Target rules for target rewa_hardware/CMakeFiles/dynamixel_ax12a.dir
 
 # All Build rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/all
+rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=8,9 "Built target dynamixel_ax12a"
+.PHONY : rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/all
 
 # Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_eus: rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+dynamixel_ax12a: rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/rule
+
+.PHONY : dynamixel_ax12a
+
+# clean rule for target.
+rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/clean
+
+#=============================================================================
+# Target rules for target rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir
+
+# All Build rule for target.
+rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 .PHONY : roscpp_generate_messages_eus
 
 # clean rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+# Target rules for target rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+rosgraph_msgs_generate_messages_nodejs: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_nodejs
 
 # clean rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir
+# Target rules for target rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir
 
 # All Build rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# clean rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/clean
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir
-
-# All Build rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_nodejs: rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+roscpp_generate_messages_nodejs: rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 .PHONY : roscpp_generate_messages_nodejs
 
 # clean rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+# Target rules for target rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+rosgraph_msgs_generate_messages_cpp: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_cpp
 
 # clean rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+# Target rules for target rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir
 
 # All Build rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_eus: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+roscpp_generate_messages_py: rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# clean rule for target.
+rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target rewa_hardware/CMakeFiles/dynamixel_mx28.dir
+
+# All Build rule for target.
+rewa_hardware/CMakeFiles/dynamixel_mx28.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_mx28.dir/build.make rewa_hardware/CMakeFiles/dynamixel_mx28.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_mx28.dir/build.make rewa_hardware/CMakeFiles/dynamixel_mx28.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=10,11 "Built target dynamixel_mx28"
+.PHONY : rewa_hardware/CMakeFiles/dynamixel_mx28.dir/all
+
+# Build rule for subdir invocation for target.
+rewa_hardware/CMakeFiles/dynamixel_mx28.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/dynamixel_mx28.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+.PHONY : rewa_hardware/CMakeFiles/dynamixel_mx28.dir/rule
+
+# Convenience name for target.
+dynamixel_mx28: rewa_hardware/CMakeFiles/dynamixel_mx28.dir/rule
+
+.PHONY : dynamixel_mx28
+
+# clean rule for target.
+rewa_hardware/CMakeFiles/dynamixel_mx28.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_mx28.dir/build.make rewa_hardware/CMakeFiles/dynamixel_mx28.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/dynamixel_mx28.dir/clean
+
+#=============================================================================
+# Target rules for target rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 .PHONY : rosgraph_msgs_generate_messages_eus
 
 # clean rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# clean rule for target.
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir
+
+# All Build rule for target.
+rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# clean rule for target.
+rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Target rules for target rewa_motion/CMakeFiles/walk_engine.dir
@@ -1147,20 +1305,20 @@ rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_msgs/CMakeFiles/std_msgs_genera
 rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/all
 rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_py.dir/all
 rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 rewa_motion/CMakeFiles/walk_engine.dir/all: rewa_motion/CMakeFiles/IKWalk.dir/all
 	$(MAKE) -f rewa_motion/CMakeFiles/walk_engine.dir/build.make rewa_motion/CMakeFiles/walk_engine.dir/depend
 	$(MAKE) -f rewa_motion/CMakeFiles/walk_engine.dir/build.make rewa_motion/CMakeFiles/walk_engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=28,29 "Built target walk_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=32,33 "Built target walk_engine"
 .PHONY : rewa_motion/CMakeFiles/walk_engine.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1179,87 +1337,6 @@ walk_engine: rewa_motion/CMakeFiles/walk_engine.dir/rule
 rewa_motion/CMakeFiles/walk_engine.dir/clean:
 	$(MAKE) -f rewa_motion/CMakeFiles/walk_engine.dir/build.make rewa_motion/CMakeFiles/walk_engine.dir/clean
 .PHONY : rewa_motion/CMakeFiles/walk_engine.dir/clean
-
-#=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# clean rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir
-
-# All Build rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# clean rule for target.
-rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wmhrdk/Dev/rewa/build/CMakeFiles 0
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# clean rule for target.
-rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Target rules for target rewa_motion/CMakeFiles/IKWalk.dir

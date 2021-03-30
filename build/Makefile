@@ -528,8 +528,21 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named dynamixel_ax12a
+
+# Build rule for target.
+dynamixel_ax12a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamixel_ax12a
+.PHONY : dynamixel_ax12a
+
+# fast build rule for target.
+dynamixel_ax12a/fast:
+	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build
+.PHONY : dynamixel_ax12a/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_eus
@@ -541,7 +554,7 @@ roscpp_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
@@ -554,21 +567,8 @@ rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
-
-# Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
@@ -580,7 +580,7 @@ roscpp_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -593,8 +593,34 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named dynamixel_mx28
+
+# Build rule for target.
+dynamixel_mx28: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamixel_mx28
+.PHONY : dynamixel_mx28
+
+# fast build rule for target.
+dynamixel_mx28/fast:
+	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_mx28.dir/build.make rewa_hardware/CMakeFiles/dynamixel_mx28.dir/build
+.PHONY : dynamixel_mx28/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_eus
@@ -606,8 +632,47 @@ rosgraph_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named walk_engine
@@ -621,45 +686,6 @@ walk_engine: cmake_check_build_system
 walk_engine/fast:
 	$(MAKE) -f rewa_motion/CMakeFiles/walk_engine.dir/build.make rewa_motion/CMakeFiles/walk_engine.dir/build
 .PHONY : walk_engine/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make rewa_motion/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_motion/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named IKWalk
@@ -715,16 +741,18 @@ help:
 	@echo "... rewa_msgs_gencpp"
 	@echo "... rewa_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_cpp"
+	@echo "... dynamixel_ax12a"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... dynamixel_mx28"
 	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... walk_engine"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... walk_engine"
 	@echo "... IKWalk"
 .PHONY : help
 

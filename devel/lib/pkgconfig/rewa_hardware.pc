@@ -1,0 +1,8 @@
+prefix=/home/wmhrdk/Dev/rewa/devel
+
+Name: rewa_hardware
+Description: Description of rewa_hardware
+Version: 0.0.0
+Cflags: -I/home/wmhrdk/Dev/rewa/src/rewa_hardware/include
+Libs: -L${prefix}/lib -lrewa_hardware
+Requires: roscpp rospy

@@ -6,4 +6,5 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("rewa_msgs")
+subdirs("rewa_hardware")
 subdirs("rewa_motion")

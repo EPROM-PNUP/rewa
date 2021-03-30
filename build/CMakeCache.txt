@@ -462,6 +462,12 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
 //Value Computed by CMake
+rewa_hardware_BINARY_DIR:STATIC=/home/wmhrdk/Dev/rewa/build/rewa_hardware
+
+//Value Computed by CMake
+rewa_hardware_SOURCE_DIR:STATIC=/home/wmhrdk/Dev/rewa/src/rewa_hardware
+
+//Value Computed by CMake
 rewa_motion_BINARY_DIR:STATIC=/home/wmhrdk/Dev/rewa/build/rewa_motion
 
 //Value Computed by CMake
@@ -651,7 +657,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
