@@ -21,8 +21,10 @@ class DynamixelMX28 {
 
 	public:
 	
+	DynamixelMX28();
 	DynamixelMX28(const short int &id);
 	
+	void setServoID(const short int &id);
 	void setGoalPosition(const unsigned short int &goal_position);
 	void setMovingSpeed(const unsigned short int &moving_speed);
 	void setTorqueOn();

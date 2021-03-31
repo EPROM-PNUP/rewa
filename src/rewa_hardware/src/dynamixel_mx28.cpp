@@ -2,7 +2,14 @@
 
 namespace rewa {
 
+DynamixelMX28::DynamixelMX28() {
+}
+
 DynamixelMX28::DynamixelMX28(const short int &id) {
+	this->id_ = id;
+}
+
+void DynamixelMX28::setServoID(const short int &id) {
 	this->id_ = id;
 }
 

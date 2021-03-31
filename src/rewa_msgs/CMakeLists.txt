@@ -50,6 +50,7 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    Euler.msg
    LegJoint.msg
+   WalkOutput.msg
  )
 
 ## Generate services in the 'srv' folder

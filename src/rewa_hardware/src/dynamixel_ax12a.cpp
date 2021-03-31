@@ -2,7 +2,14 @@
 
 namespace rewa {
 
+DynamixelAX12A::DynamixelAX12A() {
+}
+
 DynamixelAX12A::DynamixelAX12A(const short int &id) {
+	this->id_ = id;
+}
+
+void DynamixelAX12A::setServoID(const short int &id) {
 	this->id_ = id;
 }
 

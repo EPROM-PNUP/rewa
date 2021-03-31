@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "rewa_msgs: 2 messages, 0 services")
+message(STATUS "rewa_msgs: 3 messages, 0 services")
 
 set(MSG_I_FLAGS "-Irewa_msgs:/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -27,6 +27,11 @@ add_custom_target(_rewa_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rewa_msgs" "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg" "rewa_msgs/Euler"
 )
 
+get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" NAME_WE)
+add_custom_target(_rewa_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rewa_msgs" "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" "rewa_msgs/LegJoint:rewa_msgs/Euler"
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -43,6 +48,12 @@ _generate_msg_cpp(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg"
   "${MSG_I_FLAGS}"
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rewa_msgs
+)
+_generate_msg_cpp(rewa_msgs
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rewa_msgs
 )
 
@@ -63,6 +74,8 @@ add_dependencies(rewa_msgs_generate_messages rewa_msgs_generate_messages_cpp)
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_cpp _rewa_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg" NAME_WE)
+add_dependencies(rewa_msgs_generate_messages_cpp _rewa_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_cpp _rewa_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -86,6 +99,12 @@ _generate_msg_eus(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rewa_msgs
 )
+_generate_msg_eus(rewa_msgs
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rewa_msgs
+)
 
 ### Generating Services
 
@@ -104,6 +123,8 @@ add_dependencies(rewa_msgs_generate_messages rewa_msgs_generate_messages_eus)
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_eus _rewa_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg" NAME_WE)
+add_dependencies(rewa_msgs_generate_messages_eus _rewa_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_eus _rewa_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -127,6 +148,12 @@ _generate_msg_lisp(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rewa_msgs
 )
+_generate_msg_lisp(rewa_msgs
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rewa_msgs
+)
 
 ### Generating Services
 
@@ -145,6 +172,8 @@ add_dependencies(rewa_msgs_generate_messages rewa_msgs_generate_messages_lisp)
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_lisp _rewa_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg" NAME_WE)
+add_dependencies(rewa_msgs_generate_messages_lisp _rewa_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_lisp _rewa_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -168,6 +197,12 @@ _generate_msg_nodejs(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rewa_msgs
 )
+_generate_msg_nodejs(rewa_msgs
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rewa_msgs
+)
 
 ### Generating Services
 
@@ -186,6 +221,8 @@ add_dependencies(rewa_msgs_generate_messages rewa_msgs_generate_messages_nodejs)
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_nodejs _rewa_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg" NAME_WE)
+add_dependencies(rewa_msgs_generate_messages_nodejs _rewa_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_nodejs _rewa_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -209,6 +246,12 @@ _generate_msg_py(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rewa_msgs
 )
+_generate_msg_py(rewa_msgs
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
+  "${MSG_I_FLAGS}"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rewa_msgs
+)
 
 ### Generating Services
 
@@ -227,6 +270,8 @@ add_dependencies(rewa_msgs_generate_messages rewa_msgs_generate_messages_py)
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_py _rewa_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg" NAME_WE)
+add_dependencies(rewa_msgs_generate_messages_py _rewa_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" NAME_WE)
 add_dependencies(rewa_msgs_generate_messages_py _rewa_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

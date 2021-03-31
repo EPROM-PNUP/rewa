@@ -8,4 +8,6 @@
     (:file "_package_Euler" :depends-on ("_package"))
     (:file "LegJoint" :depends-on ("_package_LegJoint"))
     (:file "_package_LegJoint" :depends-on ("_package"))
+    (:file "WalkOutput" :depends-on ("_package_WalkOutput"))
+    (:file "_package_WalkOutput" :depends-on ("_package"))
   ))

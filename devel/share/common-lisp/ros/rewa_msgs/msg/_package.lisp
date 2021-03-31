@@ -5,5 +5,7 @@
    "EULER"
    "<LEGJOINT>"
    "LEGJOINT"
+   "<WALKOUTPUT>"
+   "WALKOUTPUT"
   ))
 

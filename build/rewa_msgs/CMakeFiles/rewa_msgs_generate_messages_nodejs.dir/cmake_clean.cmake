@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/wmhrdk/Dev/rewa/devel/share/gennodejs/ros/rewa_msgs/msg/Euler.js"
   "/home/wmhrdk/Dev/rewa/devel/share/gennodejs/ros/rewa_msgs/msg/LegJoint.js"
+  "/home/wmhrdk/Dev/rewa/devel/share/gennodejs/ros/rewa_msgs/msg/WalkOutput.js"
   "CMakeFiles/rewa_msgs_generate_messages_nodejs"
 )
 

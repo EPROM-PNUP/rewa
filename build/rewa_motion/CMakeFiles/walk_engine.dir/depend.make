@@ -3,6 +3,7 @@
 
 rewa_motion/CMakeFiles/walk_engine.dir/src/WalkEngine.cpp.o: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/Euler.h
 rewa_motion/CMakeFiles/walk_engine.dir/src/WalkEngine.cpp.o: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/LegJoint.h
+rewa_motion/CMakeFiles/walk_engine.dir/src/WalkEngine.cpp.o: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h
 rewa_motion/CMakeFiles/walk_engine.dir/src/WalkEngine.cpp.o: /home/wmhrdk/Dev/rewa/src/rewa_motion/include/rewa_motion/HumanoidModel.hpp
 rewa_motion/CMakeFiles/walk_engine.dir/src/WalkEngine.cpp.o: /home/wmhrdk/Dev/rewa/src/rewa_motion/include/rewa_motion/IKWalk.hpp
 rewa_motion/CMakeFiles/walk_engine.dir/src/WalkEngine.cpp.o: /home/wmhrdk/Dev/rewa/src/rewa_motion/include/rewa_motion/LegIK.hpp

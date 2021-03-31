@@ -1,7 +1,7 @@
 #include <iostream>
 #include <rewa_motion/IKWalk.hpp>
 #include <ros/ros.h>
-#include <rewa_msgs/LegJoint.h>
+#include <rewa_msgs/WalkOutput.h>
 #include <ros/console.h>
 
 
@@ -9,8 +9,7 @@ class WalkEngine {
 
 	private:
 	
-	ros::Publisher left_leg_joints_pub;
-	ros::Publisher right_leg_joints_pub;
+	ros::Publisher walk_output_pub;
 
 	struct Rhoban::IKWalkParameters params;
 
@@ -25,8 +24,7 @@ class WalkEngine {
 		time_ = time;
 		timeLength_ = timeLength;
 		
-		left_leg_joints_pub = nh.advertise<rewa_msgs::LegJoint>("/left_leg_joints", 1);
-		right_leg_joints_pub = nh.advertise<rewa_msgs::LegJoint>("/right_leg_joints", 1);
+		walk_output_pub = nh.advertise<rewa_msgs::WalkOutput>("/walk_output", 1);
 
 		params.distHipToKnee = 0.093;
 		params.distKneeToAnkle = 0.105;
@@ -72,8 +70,7 @@ class WalkEngine {
 	void runWalk() {
 		ros::Rate rate(50);
 		
-		rewa_msgs::LegJoint left_leg_joints;
-		rewa_msgs::LegJoint right_leg_joints;
+		rewa_msgs::WalkOutput walk_output;
 		
 		struct Rhoban::IKWalkOutputs outputs;
 		
@@ -110,28 +107,27 @@ class WalkEngine {
 								outputs.right_ankle_roll);
 				}
 				
-				left_leg_joints.hip.y = (float)outputs.left_hip_yaw;
-				left_leg_joints.hip.p = (float)outputs.left_hip_pitch;
-				left_leg_joints.hip.r = (float)outputs.left_hip_roll;
-				left_leg_joints.knee.y = 0.0f;
-				left_leg_joints.knee.p = (float)outputs.left_knee;
-				left_leg_joints.knee.r = 0.0f;
-				left_leg_joints.ankle.y = 0.0f;
-				left_leg_joints.ankle.p = (float)outputs.left_ankle_pitch;
-				left_leg_joints.ankle.r = (float)outputs.left_ankle_roll;
+				walk_output.left.hip.y = (float)outputs.left_hip_yaw;
+				walk_output.left.hip.p = (float)outputs.left_hip_pitch;
+				walk_output.left.hip.r = (float)outputs.left_hip_roll;
+				walk_output.left.knee.y = 0.0f;
+				walk_output.left.knee.p = (float)outputs.left_knee;
+				walk_output.left.knee.r = 0.0f;
+				walk_output.left.ankle.y = 0.0f;
+				walk_output.left.ankle.p = (float)outputs.left_ankle_pitch;
+				walk_output.left.ankle.r = (float)outputs.left_ankle_roll;
 
-				right_leg_joints.hip.y = (float)outputs.right_hip_yaw;
-				right_leg_joints.hip.p = (float)outputs.right_hip_pitch;
-				right_leg_joints.hip.r = (float)outputs.right_hip_roll;
-				right_leg_joints.knee.y = 0.0f;
-				right_leg_joints.knee.p = (float)outputs.right_knee;
-				right_leg_joints.knee.r = 0.0f;
-				right_leg_joints.ankle.y = 0.0f;
-				right_leg_joints.ankle.p = (float)outputs.right_ankle_pitch;
-				right_leg_joints.ankle.r = (float)outputs.right_ankle_roll;
+				walk_output.right.hip.y = (float)outputs.right_hip_yaw;
+				walk_output.right.hip.p = (float)outputs.right_hip_pitch;
+				walk_output.right.hip.r = (float)outputs.right_hip_roll;
+				walk_output.right.knee.y = 0.0f;
+				walk_output.right.knee.p = (float)outputs.right_knee;
+				walk_output.right.knee.r = 0.0f;
+				walk_output.right.ankle.y = 0.0f;
+				walk_output.right.ankle.p = (float)outputs.right_ankle_pitch;
+				walk_output.right.ankle.r = (float)outputs.right_ankle_roll;
 
-				left_leg_joints_pub.publish(left_leg_joints);
-				right_leg_joints_pub.publish(right_leg_joints);
+				walk_output_pub.publish(walk_output);
 
 				ros::spinOnce();
 				rate.sleep();

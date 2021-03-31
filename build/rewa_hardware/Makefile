@@ -347,6 +347,21 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+# Convenience name for target.
+rewa_hardware/CMakeFiles/servo_driver.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/servo_driver.dir/rule
+.PHONY : rewa_hardware/CMakeFiles/servo_driver.dir/rule
+
+# Convenience name for target.
+servo_driver: rewa_hardware/CMakeFiles/servo_driver.dir/rule
+
+.PHONY : servo_driver
+
+# fast build rule for target.
+servo_driver/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/servo_driver.dir/build.make rewa_hardware/CMakeFiles/servo_driver.dir/build
+.PHONY : servo_driver/fast
+
 src/dynamixel_ax12a.o: src/dynamixel_ax12a.cpp.o
 
 .PHONY : src/dynamixel_ax12a.o
@@ -401,6 +416,33 @@ src/dynamixel_mx28.cpp.s:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_mx28.dir/build.make rewa_hardware/CMakeFiles/dynamixel_mx28.dir/src/dynamixel_mx28.cpp.s
 .PHONY : src/dynamixel_mx28.cpp.s
 
+src/servo_driver.o: src/servo_driver.cpp.o
+
+.PHONY : src/servo_driver.o
+
+# target to build an object file
+src/servo_driver.cpp.o:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/servo_driver.dir/build.make rewa_hardware/CMakeFiles/servo_driver.dir/src/servo_driver.cpp.o
+.PHONY : src/servo_driver.cpp.o
+
+src/servo_driver.i: src/servo_driver.cpp.i
+
+.PHONY : src/servo_driver.i
+
+# target to preprocess a source file
+src/servo_driver.cpp.i:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/servo_driver.dir/build.make rewa_hardware/CMakeFiles/servo_driver.dir/src/servo_driver.cpp.i
+.PHONY : src/servo_driver.cpp.i
+
+src/servo_driver.s: src/servo_driver.cpp.s
+
+.PHONY : src/servo_driver.s
+
+# target to generate assembly for a file
+src/servo_driver.cpp.s:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/servo_driver.dir/build.make rewa_hardware/CMakeFiles/servo_driver.dir/src/servo_driver.cpp.s
+.PHONY : src/servo_driver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -423,15 +465,19 @@ help:
 	@echo "... dynamixel_mx28"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... test"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... test"
+	@echo "... servo_driver"
 	@echo "... src/dynamixel_ax12a.o"
 	@echo "... src/dynamixel_ax12a.i"
 	@echo "... src/dynamixel_ax12a.s"
 	@echo "... src/dynamixel_mx28.o"
 	@echo "... src/dynamixel_mx28.i"
 	@echo "... src/dynamixel_mx28.s"
+	@echo "... src/servo_driver.o"
+	@echo "... src/servo_driver.i"
+	@echo "... src/servo_driver.s"
 .PHONY : help
 
 

@@ -44,6 +44,26 @@ rewa_msgs/Euler.h
 rewa_msgs/Euler.h
 -
 
+/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+rewa_msgs/LegJoint.h
+-
+rewa_msgs/LegJoint.h
+-
+
 /home/wmhrdk/Dev/rewa/src/rewa_motion/include/rewa_motion/HumanoidModel.hpp
 Eigen/Dense
 -
@@ -69,7 +89,7 @@ rewa_motion/IKWalk.hpp
 -
 ros/ros.h
 -
-rewa_msgs/LegJoint.h
+rewa_msgs/WalkOutput.h
 -
 ros/console.h
 -
