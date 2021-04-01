@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/wmhrdk/Dev/rewa/devel/share/gennodejs/ros/rewa_msgs/msg/ControlCommandMX28.js"
   "/home/wmhrdk/Dev/rewa/devel/share/gennodejs/ros/rewa_msgs/msg/Euler.js"
   "/home/wmhrdk/Dev/rewa/devel/share/gennodejs/ros/rewa_msgs/msg/LegJoint.js"
   "/home/wmhrdk/Dev/rewa/devel/share/gennodejs/ros/rewa_msgs/msg/WalkOutput.js"

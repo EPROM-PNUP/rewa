@@ -348,21 +348,6 @@ rewa_msgs_generate_messages_eus/fast:
 .PHONY : rewa_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 rewa_msgs/CMakeFiles/rewa_msgs_geneus.dir/rule:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_geneus.dir/rule
 .PHONY : rewa_msgs/CMakeFiles/rewa_msgs_geneus.dir/rule
@@ -376,6 +361,21 @@ rewa_msgs_geneus: rewa_msgs/CMakeFiles/rewa_msgs_geneus.dir/rule
 rewa_msgs_geneus/fast:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_geneus.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_geneus.dir/build
 .PHONY : rewa_msgs_geneus/fast
+
+# Convenience name for target.
+rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make rewa_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages.dir/rule:
@@ -438,6 +438,21 @@ _rewa_msgs_generate_messages_check_deps_LegJoint/fast:
 .PHONY : _rewa_msgs_generate_messages_check_deps_LegJoint/fast
 
 # Convenience name for target.
+rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandMX28.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandMX28.dir/rule
+.PHONY : rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandMX28.dir/rule
+
+# Convenience name for target.
+_rewa_msgs_generate_messages_check_deps_ControlCommandMX28: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandMX28.dir/rule
+
+.PHONY : _rewa_msgs_generate_messages_check_deps_ControlCommandMX28
+
+# fast build rule for target.
+_rewa_msgs_generate_messages_check_deps_ControlCommandMX28/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandMX28.dir/build.make rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandMX28.dir/build
+.PHONY : _rewa_msgs_generate_messages_check_deps_ControlCommandMX28/fast
+
+# Convenience name for target.
 rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule
 .PHONY : rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule
@@ -476,12 +491,13 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... rewa_msgs_generate_messages_eus"
 	@echo "... install/strip"
-	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rewa_msgs_geneus"
+	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rewa_msgs_generate_messages"
 	@echo "... rewa_msgs_generate_messages_cpp"
 	@echo "... rewa_msgs_generate_messages_py"
 	@echo "... _rewa_msgs_generate_messages_check_deps_LegJoint"
+	@echo "... _rewa_msgs_generate_messages_check_deps_ControlCommandMX28"
 	@echo "... test"
 	@echo "... rewa_msgs_gencpp"
 .PHONY : help

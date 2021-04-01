@@ -56,6 +56,7 @@ include rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/progress.make
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/Euler.l
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/LegJoint.l
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/WalkOutput.l
+rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/ControlCommandMX28.l
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/manifest.l
 
 
@@ -72,19 +73,25 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/deve
 
 /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/WalkOutput.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/WalkOutput.l: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg
-/home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/WalkOutput.l: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg
 /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/WalkOutput.l: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg
+/home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/WalkOutput.l: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from rewa_msgs/WalkOutput.msg"
 	cd /home/wmhrdk/Dev/rewa/build/rewa_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg -Irewa_msgs:/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rewa_msgs -o /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg
 
+/home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/ControlCommandMX28.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/ControlCommandMX28.l: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from rewa_msgs/ControlCommandMX28.msg"
+	cd /home/wmhrdk/Dev/rewa/build/rewa_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg -Irewa_msgs:/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rewa_msgs -o /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg
+
 /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for rewa_msgs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for rewa_msgs"
 	cd /home/wmhrdk/Dev/rewa/build/rewa_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs rewa_msgs std_msgs
 
 rewa_msgs_generate_messages_eus: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus
 rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/Euler.l
 rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/LegJoint.l
 rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/WalkOutput.l
+rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/ControlCommandMX28.l
 rewa_msgs_generate_messages_eus: /home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/manifest.l
 rewa_msgs_generate_messages_eus: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build.make
 

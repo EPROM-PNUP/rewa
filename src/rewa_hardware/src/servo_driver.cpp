@@ -9,26 +9,30 @@ class ServoDriver {
 
 	ros::Subscriber walk_output_sub;
 
-	rewa::DynamixelAX12A dxl_servos_ax[2];
-	rewa::DynamixelMX28 dxl_servos_mx[10];
+	ros::Publisher servo_control_pub;
+
+	rewa::DynamixelAX12A dxl_ax[2];
+	rewa::DynamixelMX28 dxl_mx[10];
 
 	public:
 
 	ServoDriver(ros::NodeHandle &nh) {
+		ROS_INFO("Started /driver_node");
+
 		/*
 		 * Set ID's for each right leg
 		 * Dynamixel MX28 servos
 		 */
-		for(unsigned short int i = 0; i < 5; i++) {
-			dxl_servos_mx[i].setServoID(i + 3);
+		for(uint16_t i = 0; i < 5; i++) {
+			dxl_mx[i].setServoID(i + 3);
 		}
 		
 		/*
 		 * Set ID's for each left leg
 		 * Dynamixel MX28 servos
 		 */
-		for(unsigned short int i = 0; i < 5; i++) {
-			dxl_servos_mx[i].setServoID(i + 9);
+		for(uint16_t i = 0; i < 5; i++) {
+			dxl_mx[i].setServoID(i + 9);
 		}
 
 		/*
@@ -39,39 +43,41 @@ class ServoDriver {
 		dxl_servos_ax[1].setServoID(8);
 
 		walk_output_sub = nh.subscribe("/walk_output", 1, 
-			&ServoDriver::walk_output_callback, this);
+			&ServoDriver::walkOutputCallback, this);
+
+		servo_control_pub = nh.advertise<rewa_msgs::ControlCommandMX28>("servo_cmd", 1);
 	}
 
-	// Radian to Dynamixel MX28 converter
-	unsigned short int rad2dxl_mx28(const float &rad) {
-		short int dxl_pos = rad * 788;
-		dxl_pos = dxl_pos + 2048;
+	/* 
+	 * Callback function for walk engine output.
+	 * Called each time joint angles updated.
+	 */
+	void walkOutputCallback(const rewa_msgs::WalkOutput &msg) {
+		dxl_ax[0].setGoalPosition(DynamixelAX12A::radianToDxl(msg.left.hip.y));
+		dxl_mx[0].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.hip.p));
+		dxl_mx[1].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.hip.r));
 
-		return dxl_pos;
-	}
-	
-	// Radian to Dynamixel AX12A converter
-	unsigned short int rad2dxl_ax12a(const float &rad) {
-		short int dxl_pos = rad * 197;
-		dxl_pos = dxl_pos + 512;
+		dxl_mx[2].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.knee.p));
 
-		return dxl_pos;
+		dxl_mx[3].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.ankle.p));
+		dxl_mx[4].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.ankle.r));
+		
+		dxl_ax[1].setGoalPosition(DynamixelAX12A::radianToDxl(msg.right.hip.y));
+		dxl_mx[5].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.hip.p));
+		dxl_mx[6].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.hip.r));
+
+		dxl_mx[7].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.knee.p));
+
+		dxl_mx[8].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.ankle.p));
+		dxl_mx[9].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.ankle.r));
 	}
 
-	void walk_output_callback(const rewa_msgs::WalkOutput &msg) {
-		dxl_servos_ax[0].setGoalPosition(rad2dxl_ax12a(msg.left.hip.y));
-		dxl_servos_ax[1].setGoalPosition(rad2dxl_ax12a(msg.right.hip.y));
-		dxl_servos_mx[0].setGoalPosition(rad2dxl_mx28(msg.left.hip.p));
-		dxl_servos_mx[1].setGoalPosition(rad2dxl_mx28(msg.left.hip.r));
-		dxl_servos_mx[2].setGoalPosition(rad2dxl_mx28(msg.left.knee.p));
-		dxl_servos_mx[3].setGoalPosition(rad2dxl_mx28(msg.left.ankle.p));
-		dxl_servos_mx[4].setGoalPosition(rad2dxl_mx28(msg.left.ankle.r));
-		dxl_servos_mx[5].setGoalPosition(rad2dxl_mx28(msg.right.hip.p));
-		dxl_servos_mx[6].setGoalPosition(rad2dxl_mx28(msg.right.hip.r));
-		dxl_servos_mx[7].setGoalPosition(rad2dxl_mx28(msg.right.knee.p));
-		dxl_servos_mx[8].setGoalPosition(rad2dxl_mx28(msg.right.ankle.p));
-		dxl_servos_mx[9].setGoalPosition(rad2dxl_mx28(msg.right.ankle.r));
-	}
+	void run() {
+		ros::Rate rate(50);
+
+		rewa_msgs::CommandServo cmd_servo_msg;
+
+		cmd_servo_msg.ID2.ID.dxl_servo_ax[0].getGoalPosition();
 
 };
 

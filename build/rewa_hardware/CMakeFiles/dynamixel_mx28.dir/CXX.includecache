@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/wmhrdk/Dev/rewa/src/rewa_hardware/include/rewa_hardware/dynamixel_mx28.hpp
+cstdint
+-
 
 /home/wmhrdk/Dev/rewa/src/rewa_hardware/src/dynamixel_mx28.cpp
 rewa_hardware/dynamixel_mx28.hpp

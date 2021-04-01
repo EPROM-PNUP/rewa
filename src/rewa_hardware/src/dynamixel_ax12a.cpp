@@ -5,19 +5,23 @@ namespace rewa {
 DynamixelAX12A::DynamixelAX12A() {
 }
 
-DynamixelAX12A::DynamixelAX12A(const short int &id) {
+DynamixelAX12A::DynamixelAX12A(const uint8_t &id) {
 	this->id_ = id;
 }
 
-void DynamixelAX12A::setServoID(const short int &id) {
+static uint16_t DynamixelAX12A::radianToDxl(const float &rad) {
+	return (rad * 197) + 512;
+}
+
+void DynamixelAX12A::setServoID(const uint8_t &id) {
 	this->id_ = id;
 }
 
-void DynamixelAX12A::setGoalPosition(const unsigned short int &goal_position) {
+void DynamixelAX12A::setGoalPosition(const uint16_t &goal_position) {
 	this->goal_position_ = goal_position;
 }
 
-void DynamixelAX12A::setMovingSpeed(const unsigned short int &moving_speed) {
+void DynamixelAX12A::setMovingSpeed(const uint16_t &moving_speed) {
 	this->moving_speed_ = moving_speed;
 }
 
@@ -29,15 +33,27 @@ void DynamixelAX12A::setTorqueOff() {
 	this->torque_ = false;
 }
 
-unsigned short int DynamixelAX12A::getPresentPosition() {
+uint8_t DynamixelAX12A::getServoID() {
+	return this->id_;
+}
+
+uint16_t DynamixelAX12A::getGoalPosition() {
+	return this->goal_position_;
+}
+
+uint16_t DynamixelAX12A::getMovingSpeed() {
+	return this->moving_speed_;
+}
+
+uint16_t DynamixelAX12A::getPresentPosition() {
 	return this->present_position_;
 }
 
-unsigned short int DynamixelAX12A::getPresentSpeed() {
+uint16_t DynamixelAX12A::getPresentSpeed() {
 	return this->present_speed_;
 }
 
-short int DynamixelAX12A::getPresentLoad() {
+int16_t DynamixelAX12A::getPresentLoad() {
 	return this->present_load_;
 }
 

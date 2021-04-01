@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/manifest.l"
+  "/home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/ControlCommandMX28.l"
   "/home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/Euler.l"
   "/home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/LegJoint.l"
   "/home/wmhrdk/Dev/rewa/devel/share/roseus/ros/rewa_msgs/msg/WalkOutput.l"

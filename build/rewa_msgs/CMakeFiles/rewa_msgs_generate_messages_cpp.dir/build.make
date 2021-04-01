@@ -56,6 +56,7 @@ include rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/progress.make
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/Euler.h
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/LegJoint.h
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h
+rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/ControlCommandMX28.h
 
 
 /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/Euler.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -73,16 +74,23 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp: /home/wmhrdk/Dev/rewa/deve
 
 /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg
-/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg
 /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg
+/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg
 /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from rewa_msgs/WalkOutput.msg"
 	cd /home/wmhrdk/Dev/rewa/src/rewa_msgs && /home/wmhrdk/Dev/rewa/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg -Irewa_msgs:/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rewa_msgs -o /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/ControlCommandMX28.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/ControlCommandMX28.h: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg
+/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/ControlCommandMX28.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from rewa_msgs/ControlCommandMX28.msg"
+	cd /home/wmhrdk/Dev/rewa/src/rewa_msgs && /home/wmhrdk/Dev/rewa/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg -Irewa_msgs:/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rewa_msgs -o /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs -e /opt/ros/noetic/share/gencpp/cmake/..
 
 rewa_msgs_generate_messages_cpp: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp
 rewa_msgs_generate_messages_cpp: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/Euler.h
 rewa_msgs_generate_messages_cpp: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/LegJoint.h
 rewa_msgs_generate_messages_cpp: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/WalkOutput.h
+rewa_msgs_generate_messages_cpp: /home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/ControlCommandMX28.h
 rewa_msgs_generate_messages_cpp: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_cpp.dir/build.make
 
 .PHONY : rewa_msgs_generate_messages_cpp

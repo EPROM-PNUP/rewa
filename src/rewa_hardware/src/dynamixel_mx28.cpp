@@ -5,19 +5,23 @@ namespace rewa {
 DynamixelMX28::DynamixelMX28() {
 }
 
-DynamixelMX28::DynamixelMX28(const short int &id) {
+DynamixelMX28::DynamixelMX28(const uint8_t &id) {
 	this->id_ = id;
 }
 
-void DynamixelMX28::setServoID(const short int &id) {
+static uint16_t DynamixelMX28::radianToDxl(const float &rad) {
+	return (rad * 788) + 2048;
+}
+
+void DynamixelMX28::setServoID(const uint8_t &id) {
 	this->id_ = id;
 }
 
-void DynamixelMX28::setGoalPosition(const unsigned short int &goal_position) {
+void DynamixelMX28::setGoalPosition(const uint16_t &goal_position) {
 	this->goal_position_ = goal_position;
 }
 
-void DynamixelMX28::setMovingSpeed(const unsigned short int &moving_speed) {
+void DynamixelMX28::setMovingSpeed(const uint16_t &moving_speed) {
 	this->moving_speed_ = moving_speed;
 }
 
@@ -29,15 +33,27 @@ void DynamixelMX28::setTorqueOff() {
 	this->torque_ = false;
 }
 
-unsigned short int DynamixelMX28::getPresentPosition() {
+uint8_t DynamixelMX28::getServoID() {
+	return this->id_;
+}
+
+uint16_t DynamixelMX28::getGoalPosition() {
+	return this->goal_position_;
+}
+
+uint16_t DynamixelMX28::getMovingSpeed() {
+	return this->moving_speed_;
+}
+
+uint16_t DynamixelMX28::getPresentPosition() {
 	return this->present_position_;
 }
 
-unsigned short int DynamixelMX28::getPresentSpeed() {
+uint16_t DynamixelMX28::getPresentSpeed() {
 	return this->present_speed_;
 }
 
-short int DynamixelMX28::getPresentLoad() {
+int16_t DynamixelMX28::getPresentLoad() {
 	return this->present_load_;
 }
 

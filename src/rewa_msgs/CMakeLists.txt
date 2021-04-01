@@ -51,6 +51,9 @@ find_package(catkin REQUIRED COMPONENTS
    Euler.msg
    LegJoint.msg
    WalkOutput.msg
+   ControlCommandMX28.msg
+   ControlCommandAX12A.msg
+   CommandServo.msg
  )
 
 ## Generate services in the 'srv' folder

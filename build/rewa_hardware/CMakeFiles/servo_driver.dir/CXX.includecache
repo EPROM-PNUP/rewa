@@ -65,8 +65,12 @@ rewa_msgs/LegJoint.h
 -
 
 /home/wmhrdk/Dev/rewa/src/rewa_hardware/include/rewa_hardware/dynamixel_ax12a.hpp
+cstdint
+-
 
 /home/wmhrdk/Dev/rewa/src/rewa_hardware/include/rewa_hardware/dynamixel_mx28.hpp
+cstdint
+-
 
 /home/wmhrdk/Dev/rewa/src/rewa_hardware/src/servo_driver.cpp
 ros/ros.h

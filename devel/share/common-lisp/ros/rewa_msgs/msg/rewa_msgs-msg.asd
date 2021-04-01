@@ -4,6 +4,8 @@
 (defsystem "rewa_msgs-msg"
   :depends-on (:roslisp-msg-protocol :roslisp-utils )
   :components ((:file "_package")
+    (:file "ControlCommandMX28" :depends-on ("_package_ControlCommandMX28"))
+    (:file "_package_ControlCommandMX28" :depends-on ("_package"))
     (:file "Euler" :depends-on ("_package_Euler"))
     (:file "_package_Euler" :depends-on ("_package"))
     (:file "LegJoint" :depends-on ("_package_LegJoint"))
