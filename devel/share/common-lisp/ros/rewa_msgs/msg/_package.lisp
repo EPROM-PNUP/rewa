@@ -1,6 +1,10 @@
 (cl:defpackage rewa_msgs-msg
   (:use )
   (:export
+   "<COMMANDSERVO>"
+   "COMMANDSERVO"
+   "<CONTROLCOMMANDAX12A>"
+   "CONTROLCOMMANDAX12A"
    "<CONTROLCOMMANDMX28>"
    "CONTROLCOMMANDMX28"
    "<EULER>"

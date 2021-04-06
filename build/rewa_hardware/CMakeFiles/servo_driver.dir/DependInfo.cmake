@@ -26,7 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/wmhrdk/Dev/rewa/build/rewa_hardware/CMakeFiles/dynamixel_mx28.dir/DependInfo.cmake"
-  "/home/wmhrdk/Dev/rewa/build/rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/DependInfo.cmake"
+  "/home/wmhrdk/Dev/rewa/build/rewa_hardware/CMakeFiles/dynamixel_ax12.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

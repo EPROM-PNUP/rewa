@@ -90,6 +90,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -123,17 +134,6 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -183,36 +183,6 @@ rewa_msgs_genpy/fast:
 .PHONY : rewa_msgs_genpy/fast
 
 # Convenience name for target.
-rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/rule
-.PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rewa_msgs_generate_messages_nodejs: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rewa_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rewa_msgs_generate_messages_nodejs/fast:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build
-.PHONY : rewa_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/rule:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/rule
-.PHONY : rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/rule
-
-# Convenience name for target.
-rewa_msgs_genlisp: rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/rule
-
-.PHONY : rewa_msgs_genlisp
-
-# fast build rule for target.
-rewa_msgs_genlisp/fast:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/build
-.PHONY : rewa_msgs_genlisp/fast
-
-# Convenience name for target.
 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/rule:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/rule
 .PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/rule
@@ -226,6 +196,21 @@ rewa_msgs_generate_messages_lisp: rewa_msgs/CMakeFiles/rewa_msgs_generate_messag
 rewa_msgs_generate_messages_lisp/fast:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/build
 .PHONY : rewa_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule
+.PHONY : rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule
+
+# Convenience name for target.
+rewa_msgs_gencpp: rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule
+
+.PHONY : rewa_msgs_gencpp
+
+# fast build rule for target.
+rewa_msgs_gencpp/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/build
+.PHONY : rewa_msgs_gencpp/fast
 
 # Convenience name for target.
 rewa_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
@@ -333,19 +318,49 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/rule:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/rule
-.PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/rule
+rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/rule
+.PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-rewa_msgs_generate_messages_eus: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/rule
+rewa_msgs_generate_messages_nodejs: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : rewa_msgs_generate_messages_eus
+.PHONY : rewa_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-rewa_msgs_generate_messages_eus/fast:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build
-.PHONY : rewa_msgs_generate_messages_eus/fast
+rewa_msgs_generate_messages_nodejs/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build
+.PHONY : rewa_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/rule
+.PHONY : rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/rule
+
+# Convenience name for target.
+rewa_msgs_genlisp: rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/rule
+
+.PHONY : rewa_msgs_genlisp
+
+# fast build rule for target.
+rewa_msgs_genlisp/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/build
+.PHONY : rewa_msgs_genlisp/fast
+
+# Convenience name for target.
+rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/rule
+.PHONY : rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/rule
+
+# Convenience name for target.
+_rewa_msgs_generate_messages_check_deps_CommandServo: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/rule
+
+.PHONY : _rewa_msgs_generate_messages_check_deps_CommandServo
+
+# fast build rule for target.
+_rewa_msgs_generate_messages_check_deps_CommandServo/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/build.make rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/build
+.PHONY : _rewa_msgs_generate_messages_check_deps_CommandServo/fast
 
 # Convenience name for target.
 rewa_msgs/CMakeFiles/rewa_msgs_geneus.dir/rule:
@@ -453,19 +468,34 @@ _rewa_msgs_generate_messages_check_deps_ControlCommandMX28/fast:
 .PHONY : _rewa_msgs_generate_messages_check_deps_ControlCommandMX28/fast
 
 # Convenience name for target.
-rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule
-.PHONY : rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule
+rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/rule
+.PHONY : rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-rewa_msgs_gencpp: rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/rule
+rewa_msgs_generate_messages_eus: rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/rule
 
-.PHONY : rewa_msgs_gencpp
+.PHONY : rewa_msgs_generate_messages_eus
 
 # fast build rule for target.
-rewa_msgs_gencpp/fast:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/build
-.PHONY : rewa_msgs_gencpp/fast
+rewa_msgs_generate_messages_eus/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build
+.PHONY : rewa_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A.dir/rule
+.PHONY : rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A.dir/rule
+
+# Convenience name for target.
+_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A.dir/rule
+
+.PHONY : _rewa_msgs_generate_messages_check_deps_ControlCommandAX12A
+
+# fast build rule for target.
+_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A.dir/build.make rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A.dir/build
+.PHONY : _rewa_msgs_generate_messages_check_deps_ControlCommandAX12A/fast
 
 # Help Target
 help:
@@ -477,9 +507,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... rewa_msgs_genpy"
-	@echo "... rewa_msgs_generate_messages_nodejs"
-	@echo "... rewa_msgs_genlisp"
 	@echo "... rewa_msgs_generate_messages_lisp"
+	@echo "... test"
+	@echo "... rewa_msgs_gencpp"
 	@echo "... install"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... list_install_components"
@@ -489,7 +519,9 @@ help:
 	@echo "... _rewa_msgs_generate_messages_check_deps_Euler"
 	@echo "... _rewa_msgs_generate_messages_check_deps_WalkOutput"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... rewa_msgs_generate_messages_eus"
+	@echo "... rewa_msgs_generate_messages_nodejs"
+	@echo "... rewa_msgs_genlisp"
+	@echo "... _rewa_msgs_generate_messages_check_deps_CommandServo"
 	@echo "... install/strip"
 	@echo "... rewa_msgs_geneus"
 	@echo "... std_msgs_generate_messages_cpp"
@@ -498,8 +530,8 @@ help:
 	@echo "... rewa_msgs_generate_messages_py"
 	@echo "... _rewa_msgs_generate_messages_check_deps_LegJoint"
 	@echo "... _rewa_msgs_generate_messages_check_deps_ControlCommandMX28"
-	@echo "... test"
-	@echo "... rewa_msgs_gencpp"
+	@echo "... rewa_msgs_generate_messages_eus"
+	@echo "... _rewa_msgs_generate_messages_check_deps_ControlCommandAX12A"
 .PHONY : help
 
 

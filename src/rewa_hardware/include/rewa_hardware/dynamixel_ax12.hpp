@@ -1,11 +1,11 @@
-#ifndef DXLAX12A
-#define DXLAX12A
+#ifndef DXLAX12
+#define DXLAX12
 
 #include <cstdint>
 
 namespace rewa {
 
-class DynamixelAX12A {
+class DynamixelAX12 {
 
 	private:
 	
@@ -23,8 +23,8 @@ class DynamixelAX12A {
 
 	public:
 	
-	DynamixelAX12A();
-	DynamixelAX12A(const uint8_t &id);
+	DynamixelAX12();
+	DynamixelAX12(const uint8_t &id);
 
 	static uint16_t radianToDxl(const float &rad);
 

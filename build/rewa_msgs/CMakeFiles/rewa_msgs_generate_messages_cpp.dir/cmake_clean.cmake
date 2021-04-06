@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/CommandServo.h"
+  "/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/ControlCommandAX12A.h"
   "/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/ControlCommandMX28.h"
   "/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/Euler.h"
   "/home/wmhrdk/Dev/rewa/devel/include/rewa_msgs/LegJoint.h"

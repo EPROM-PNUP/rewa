@@ -183,21 +183,6 @@ roscpp_generate_messages_cpp/fast:
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
-rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/rule:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/rule
-.PHONY : rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/rule
-
-# Convenience name for target.
-dynamixel_ax12a: rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/rule
-
-.PHONY : dynamixel_ax12a
-
-# fast build rule for target.
-dynamixel_ax12a/fast:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build
-.PHONY : dynamixel_ax12a/fast
-
-# Convenience name for target.
 rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : rewa_hardware/CMakeFiles/roscpp_generate_messages_eus.dir/rule
@@ -333,6 +318,21 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
+rewa_hardware/CMakeFiles/dynamixel_ax12.dir/rule:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/dynamixel_ax12.dir/rule
+.PHONY : rewa_hardware/CMakeFiles/dynamixel_ax12.dir/rule
+
+# Convenience name for target.
+dynamixel_ax12: rewa_hardware/CMakeFiles/dynamixel_ax12.dir/rule
+
+.PHONY : dynamixel_ax12
+
+# fast build rule for target.
+dynamixel_ax12/fast:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12.dir/build
+.PHONY : dynamixel_ax12/fast
+
+# Convenience name for target.
 rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f CMakeFiles/Makefile2 rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : rewa_hardware/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
@@ -362,32 +362,32 @@ servo_driver/fast:
 	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/servo_driver.dir/build.make rewa_hardware/CMakeFiles/servo_driver.dir/build
 .PHONY : servo_driver/fast
 
-src/dynamixel_ax12a.o: src/dynamixel_ax12a.cpp.o
+src/dynamixel_ax12.o: src/dynamixel_ax12.cpp.o
 
-.PHONY : src/dynamixel_ax12a.o
+.PHONY : src/dynamixel_ax12.o
 
 # target to build an object file
-src/dynamixel_ax12a.cpp.o:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/src/dynamixel_ax12a.cpp.o
-.PHONY : src/dynamixel_ax12a.cpp.o
+src/dynamixel_ax12.cpp.o:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12.dir/src/dynamixel_ax12.cpp.o
+.PHONY : src/dynamixel_ax12.cpp.o
 
-src/dynamixel_ax12a.i: src/dynamixel_ax12a.cpp.i
+src/dynamixel_ax12.i: src/dynamixel_ax12.cpp.i
 
-.PHONY : src/dynamixel_ax12a.i
+.PHONY : src/dynamixel_ax12.i
 
 # target to preprocess a source file
-src/dynamixel_ax12a.cpp.i:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/src/dynamixel_ax12a.cpp.i
-.PHONY : src/dynamixel_ax12a.cpp.i
+src/dynamixel_ax12.cpp.i:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12.dir/src/dynamixel_ax12.cpp.i
+.PHONY : src/dynamixel_ax12.cpp.i
 
-src/dynamixel_ax12a.s: src/dynamixel_ax12a.cpp.s
+src/dynamixel_ax12.s: src/dynamixel_ax12.cpp.s
 
-.PHONY : src/dynamixel_ax12a.s
+.PHONY : src/dynamixel_ax12.s
 
 # target to generate assembly for a file
-src/dynamixel_ax12a.cpp.s:
-	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/src/dynamixel_ax12a.cpp.s
-.PHONY : src/dynamixel_ax12a.cpp.s
+src/dynamixel_ax12.cpp.s:
+	cd /home/wmhrdk/Dev/rewa/build && $(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12.dir/src/dynamixel_ax12.cpp.s
+.PHONY : src/dynamixel_ax12.cpp.s
 
 src/dynamixel_mx28.o: src/dynamixel_mx28.cpp.o
 
@@ -455,7 +455,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... roscpp_generate_messages_cpp"
-	@echo "... dynamixel_ax12a"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... install"
@@ -466,12 +465,13 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... dynamixel_ax12"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... test"
 	@echo "... servo_driver"
-	@echo "... src/dynamixel_ax12a.o"
-	@echo "... src/dynamixel_ax12a.i"
-	@echo "... src/dynamixel_ax12a.s"
+	@echo "... src/dynamixel_ax12.o"
+	@echo "... src/dynamixel_ax12.i"
+	@echo "... src/dynamixel_ax12.s"
 	@echo "... src/dynamixel_mx28.o"
 	@echo "... src/dynamixel_mx28.i"
 	@echo "... src/dynamixel_mx28.s"

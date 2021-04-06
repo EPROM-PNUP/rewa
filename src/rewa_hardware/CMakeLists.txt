@@ -125,8 +125,8 @@ add_library(dynamixel_mx28
   src/dynamixel_mx28.cpp
 )
 
-add_library(dynamixel_ax12a
-  src/dynamixel_ax12a.cpp
+add_library(dynamixel_ax12
+  src/dynamixel_ax12.cpp
 )
 
 ## Add cmake target dependencies of the library
@@ -149,7 +149,7 @@ add_executable(servo_driver src/servo_driver.cpp)
 target_link_libraries(servo_driver
   ${catkin_LIBRARIES}
   dynamixel_mx28
-  dynamixel_ax12a
+  dynamixel_ax12
 )
 
 ## Add cmake target dependencies of the executable

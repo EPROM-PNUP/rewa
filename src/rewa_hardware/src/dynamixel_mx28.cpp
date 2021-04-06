@@ -9,7 +9,7 @@ DynamixelMX28::DynamixelMX28(const uint8_t &id) {
 	this->id_ = id;
 }
 
-static uint16_t DynamixelMX28::radianToDxl(const float &rad) {
+uint16_t DynamixelMX28::radianToDxl(const float &rad) {
 	return (rad * 788) + 2048;
 }
 

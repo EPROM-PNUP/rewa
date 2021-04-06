@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "/home/wmhrdk/Dev/rewa/devel/lib/python3/dist-packages/rewa_msgs/msg/_CommandServo.py"
+  "/home/wmhrdk/Dev/rewa/devel/lib/python3/dist-packages/rewa_msgs/msg/_ControlCommandAX12A.py"
   "/home/wmhrdk/Dev/rewa/devel/lib/python3/dist-packages/rewa_msgs/msg/_ControlCommandMX28.py"
   "/home/wmhrdk/Dev/rewa/devel/lib/python3/dist-packages/rewa_msgs/msg/_Euler.py"
   "/home/wmhrdk/Dev/rewa/devel/lib/python3/dist-packages/rewa_msgs/msg/_LegJoint.py"

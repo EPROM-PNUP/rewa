@@ -97,7 +97,7 @@ servo_driver_EXTERNAL_OBJECTS =
 /home/wmhrdk/Dev/rewa/devel/lib/rewa_hardware/servo_driver: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/wmhrdk/Dev/rewa/devel/lib/rewa_hardware/servo_driver: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/wmhrdk/Dev/rewa/devel/lib/rewa_hardware/servo_driver: /home/wmhrdk/Dev/rewa/devel/lib/libdynamixel_mx28.so
-/home/wmhrdk/Dev/rewa/devel/lib/rewa_hardware/servo_driver: /home/wmhrdk/Dev/rewa/devel/lib/libdynamixel_ax12a.so
+/home/wmhrdk/Dev/rewa/devel/lib/rewa_hardware/servo_driver: /home/wmhrdk/Dev/rewa/devel/lib/libdynamixel_ax12.so
 /home/wmhrdk/Dev/rewa/devel/lib/rewa_hardware/servo_driver: rewa_hardware/CMakeFiles/servo_driver.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/wmhrdk/Dev/rewa/devel/lib/rewa_hardware/servo_driver"
 	cd /home/wmhrdk/Dev/rewa/build/rewa_hardware && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/servo_driver.dir/link.txt --verbose=$(VERBOSE)

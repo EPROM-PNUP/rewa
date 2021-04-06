@@ -1,17 +1,17 @@
 #include <ros/ros.h>
 #include <rewa_hardware/dynamixel_mx28.hpp>
-#include <rewa_hardware/dynamixel_ax12a.hpp>
+#include <rewa_hardware/dynamixel_ax12.hpp>
 #include <rewa_msgs/WalkOutput.h>
+#include <rewa_msgs/CommandServo.h>
 
 class ServoDriver {
 
 	private:
 
 	ros::Subscriber walk_output_sub;
-
 	ros::Publisher servo_control_pub;
 
-	rewa::DynamixelAX12A dxl_ax[2];
+	rewa::DynamixelAX12 dxl_ax[2];
 	rewa::DynamixelMX28 dxl_mx[10];
 
 	public:
@@ -39,13 +39,13 @@ class ServoDriver {
 		 * Set ID's for right and left hip
 		 * Dynamixel AX12A servos
 		 */	
-		dxl_servos_ax[0].setServoID(2);
-		dxl_servos_ax[1].setServoID(8);
+		dxl_ax[0].setServoID(2);
+		dxl_ax[1].setServoID(8);
 
 		walk_output_sub = nh.subscribe("/walk_output", 1, 
 			&ServoDriver::walkOutputCallback, this);
 
-		servo_control_pub = nh.advertise<rewa_msgs::ControlCommandMX28>("servo_cmd", 1);
+		servo_control_pub = nh.advertise<rewa_msgs::CommandServo>("servo_cmd", 10);
 	}
 
 	/* 
@@ -53,32 +53,58 @@ class ServoDriver {
 	 * Called each time joint angles updated.
 	 */
 	void walkOutputCallback(const rewa_msgs::WalkOutput &msg) {
-		dxl_ax[0].setGoalPosition(DynamixelAX12A::radianToDxl(msg.left.hip.y));
-		dxl_mx[0].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.hip.p));
-		dxl_mx[1].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.hip.r));
+		// Left hip servos
+		dxl_ax[0].setGoalPosition(rewa::DynamixelAX12::radianToDxl(msg.left.hip.y));
+		dxl_mx[0].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.left.hip.p));
+		dxl_mx[1].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.left.hip.r));
 
-		dxl_mx[2].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.knee.p));
+		// Left knee servo
+		dxl_mx[2].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.left.knee.p));
 
-		dxl_mx[3].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.ankle.p));
-		dxl_mx[4].setGoalPosition(DynamixelMX28::radianToDxl(msg.left.ankle.r));
+		// Left ankle servos
+		dxl_mx[3].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.left.ankle.p));
+		dxl_mx[4].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.left.ankle.r));
 		
-		dxl_ax[1].setGoalPosition(DynamixelAX12A::radianToDxl(msg.right.hip.y));
-		dxl_mx[5].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.hip.p));
-		dxl_mx[6].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.hip.r));
+		// Right hip servos
+		dxl_ax[1].setGoalPosition(rewa::DynamixelAX12::radianToDxl(msg.right.hip.y));
+		dxl_mx[5].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.right.hip.p));
+		dxl_mx[6].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.right.hip.r));
 
-		dxl_mx[7].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.knee.p));
+		// Right knee servo
+		dxl_mx[7].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.right.knee.p));
 
-		dxl_mx[8].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.ankle.p));
-		dxl_mx[9].setGoalPosition(DynamixelMX28::radianToDxl(msg.right.ankle.r));
+		// Right ankle srvos
+		dxl_mx[8].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.right.ankle.p));
+		dxl_mx[9].setGoalPosition(rewa::DynamixelMX28::radianToDxl(msg.right.ankle.r));
 	}
 
 	void run() {
-		ros::Rate rate(50);
+		while(ros::ok()) {
+			ros::Rate rate(50);
 
-		rewa_msgs::CommandServo cmd_servo_msg;
+			rewa_msgs::CommandServo cmd_servo_msg;
 
-		cmd_servo_msg.ID2.ID.dxl_servo_ax[0].getGoalPosition();
+			cmd_servo_msg.ID2.goalpos = dxl_ax[0].getGoalPosition();
+			cmd_servo_msg.ID3.goalpos = dxl_mx[0].getGoalPosition();
+			cmd_servo_msg.ID4.goalpos = dxl_mx[1].getGoalPosition();
+			cmd_servo_msg.ID5.goalpos = dxl_mx[2].getGoalPosition();
+			cmd_servo_msg.ID6.goalpos = dxl_mx[3].getGoalPosition();
+			cmd_servo_msg.ID7.goalpos = dxl_mx[4].getGoalPosition();
 
+			cmd_servo_msg.ID8.goalpos = dxl_ax[1].getGoalPosition();
+			cmd_servo_msg.ID9.goalpos = dxl_mx[5].getGoalPosition();
+			cmd_servo_msg.ID10.goalpos = dxl_mx[6].getGoalPosition();
+			cmd_servo_msg.ID11.goalpos = dxl_mx[7].getGoalPosition();
+			cmd_servo_msg.ID12.goalpos = dxl_mx[8].getGoalPosition();
+			cmd_servo_msg.ID13.goalpos = dxl_mx[9].getGoalPosition();
+
+			servo_control_pub.publish(cmd_servo_msg);
+
+			ros::spinOnce();
+
+			rate.sleep();
+		}
+	}
 };
 
 int main(int argc, char **argv) {
@@ -87,6 +113,7 @@ int main(int argc, char **argv) {
 	
 	ServoDriver sd(nh);
 
-	ros::spin();
+	sd.run();
+
 	return 0;
 }

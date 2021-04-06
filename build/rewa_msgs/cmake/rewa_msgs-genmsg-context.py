@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg"
+messages_str = "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg"
 services_str = ""
 pkg_name = "rewa_msgs"
 dependencies_str = "std_msgs"

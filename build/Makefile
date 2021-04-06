@@ -298,32 +298,6 @@ rewa_msgs_genpy/fast:
 .PHONY : rewa_msgs_genpy/fast
 
 #=============================================================================
-# Target rules for targets named rewa_msgs_generate_messages_nodejs
-
-# Build rule for target.
-rewa_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_msgs_generate_messages_nodejs
-.PHONY : rewa_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rewa_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build
-.PHONY : rewa_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named rewa_msgs_genlisp
-
-# Build rule for target.
-rewa_msgs_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_msgs_genlisp
-.PHONY : rewa_msgs_genlisp
-
-# fast build rule for target.
-rewa_msgs_genlisp/fast:
-	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/build
-.PHONY : rewa_msgs_genlisp/fast
-
-#=============================================================================
 # Target rules for targets named rewa_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -335,6 +309,19 @@ rewa_msgs_generate_messages_lisp: cmake_check_build_system
 rewa_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp.dir/build
 .PHONY : rewa_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rewa_msgs_gencpp
+
+# Build rule for target.
+rewa_msgs_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_msgs_gencpp
+.PHONY : rewa_msgs_gencpp
+
+# fast build rule for target.
+rewa_msgs_gencpp/fast:
+	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/build
+.PHONY : rewa_msgs_gencpp/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_eus
@@ -428,17 +415,43 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named rewa_msgs_generate_messages_eus
+# Target rules for targets named rewa_msgs_generate_messages_nodejs
 
 # Build rule for target.
-rewa_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_msgs_generate_messages_eus
-.PHONY : rewa_msgs_generate_messages_eus
+rewa_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_msgs_generate_messages_nodejs
+.PHONY : rewa_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-rewa_msgs_generate_messages_eus/fast:
-	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build
-.PHONY : rewa_msgs_generate_messages_eus/fast
+rewa_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_nodejs.dir/build
+.PHONY : rewa_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named rewa_msgs_genlisp
+
+# Build rule for target.
+rewa_msgs_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_msgs_genlisp
+.PHONY : rewa_msgs_genlisp
+
+# fast build rule for target.
+rewa_msgs_genlisp/fast:
+	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_genlisp.dir/build
+.PHONY : rewa_msgs_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named _rewa_msgs_generate_messages_check_deps_CommandServo
+
+# Build rule for target.
+_rewa_msgs_generate_messages_check_deps_CommandServo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rewa_msgs_generate_messages_check_deps_CommandServo
+.PHONY : _rewa_msgs_generate_messages_check_deps_CommandServo
+
+# fast build rule for target.
+_rewa_msgs_generate_messages_check_deps_CommandServo/fast:
+	$(MAKE) -f rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/build.make rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/build
+.PHONY : _rewa_msgs_generate_messages_check_deps_CommandServo/fast
 
 #=============================================================================
 # Target rules for targets named rewa_msgs_geneus
@@ -532,17 +545,30 @@ _rewa_msgs_generate_messages_check_deps_ControlCommandMX28/fast:
 .PHONY : _rewa_msgs_generate_messages_check_deps_ControlCommandMX28/fast
 
 #=============================================================================
-# Target rules for targets named rewa_msgs_gencpp
+# Target rules for targets named rewa_msgs_generate_messages_eus
 
 # Build rule for target.
-rewa_msgs_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rewa_msgs_gencpp
-.PHONY : rewa_msgs_gencpp
+rewa_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rewa_msgs_generate_messages_eus
+.PHONY : rewa_msgs_generate_messages_eus
 
 # fast build rule for target.
-rewa_msgs_gencpp/fast:
-	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_gencpp.dir/build
-.PHONY : rewa_msgs_gencpp/fast
+rewa_msgs_generate_messages_eus/fast:
+	$(MAKE) -f rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build.make rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_eus.dir/build
+.PHONY : rewa_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _rewa_msgs_generate_messages_check_deps_ControlCommandAX12A
+
+# Build rule for target.
+_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rewa_msgs_generate_messages_check_deps_ControlCommandAX12A
+.PHONY : _rewa_msgs_generate_messages_check_deps_ControlCommandAX12A
+
+# fast build rule for target.
+_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A/fast:
+	$(MAKE) -f rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A.dir/build.make rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_ControlCommandAX12A.dir/build
+.PHONY : _rewa_msgs_generate_messages_check_deps_ControlCommandAX12A/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
@@ -556,19 +582,6 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 roscpp_generate_messages_cpp/fast:
 	$(MAKE) -f rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make rewa_hardware/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named dynamixel_ax12a
-
-# Build rule for target.
-dynamixel_ax12a: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamixel_ax12a
-.PHONY : dynamixel_ax12a
-
-# fast build rule for target.
-dynamixel_ax12a/fast:
-	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12a.dir/build
-.PHONY : dynamixel_ax12a/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_eus
@@ -688,6 +701,19 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named dynamixel_ax12
+
+# Build rule for target.
+dynamixel_ax12: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamixel_ax12
+.PHONY : dynamixel_ax12
+
+# fast build rule for target.
+dynamixel_ax12/fast:
+	$(MAKE) -f rewa_hardware/CMakeFiles/dynamixel_ax12.dir/build.make rewa_hardware/CMakeFiles/dynamixel_ax12.dir/build
+.PHONY : dynamixel_ax12/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_py
 
 # Build rule for target.
@@ -762,9 +788,8 @@ help:
 	@echo "... gtest_main"
 	@echo "... gtest"
 	@echo "... rewa_msgs_genpy"
-	@echo "... rewa_msgs_generate_messages_nodejs"
-	@echo "... rewa_msgs_genlisp"
 	@echo "... rewa_msgs_generate_messages_lisp"
+	@echo "... rewa_msgs_gencpp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rewa_msgs_gennodejs"
@@ -772,7 +797,9 @@ help:
 	@echo "... _rewa_msgs_generate_messages_check_deps_Euler"
 	@echo "... _rewa_msgs_generate_messages_check_deps_WalkOutput"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... rewa_msgs_generate_messages_eus"
+	@echo "... rewa_msgs_generate_messages_nodejs"
+	@echo "... rewa_msgs_genlisp"
+	@echo "... _rewa_msgs_generate_messages_check_deps_CommandServo"
 	@echo "... rewa_msgs_geneus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rewa_msgs_generate_messages"
@@ -780,9 +807,9 @@ help:
 	@echo "... rewa_msgs_generate_messages_py"
 	@echo "... _rewa_msgs_generate_messages_check_deps_LegJoint"
 	@echo "... _rewa_msgs_generate_messages_check_deps_ControlCommandMX28"
-	@echo "... rewa_msgs_gencpp"
+	@echo "... rewa_msgs_generate_messages_eus"
+	@echo "... _rewa_msgs_generate_messages_check_deps_ControlCommandAX12A"
 	@echo "... roscpp_generate_messages_cpp"
-	@echo "... dynamixel_ax12a"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_nodejs"
@@ -792,6 +819,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... dynamixel_ax12"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... servo_driver"
 	@echo "... walk_engine"

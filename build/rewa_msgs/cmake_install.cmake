@@ -43,6 +43,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg"
     "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
     "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg"
+    "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg"
+    "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg"
     )
 endif()
 
