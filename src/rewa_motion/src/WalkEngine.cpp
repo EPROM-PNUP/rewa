@@ -20,6 +20,8 @@ class WalkEngine {
 	public:
 
 	WalkEngine (ros::NodeHandle &nh, double phase, double time, double timeLength) {
+		ROS_INFO("Running /walk_engine");
+
 		phase_ = phase;
 		time_ = time;
 		timeLength_ = timeLength;
