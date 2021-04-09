@@ -41,6 +41,17 @@ class ServoDriver {
 	ServoDriver(ros::NodeHandle &nh) {
 		ROS_INFO("Running /driver_node");
 		
+		HEAD_J0.setServoID(21);
+		HEAD_J1.setServoID(22);
+
+		LARM_J0.setServoID(15);
+		LARM_J1.setServoID(16);
+		LARM_J2.setServoID(17);
+		
+		RARM_J0.setServoID(18);
+		RARM_J1.setServoID(19);
+		RARM_J2.setServoID(20);
+
 		LLEG_J0.setServoID(2);
 		LLEG_J1.setServoID(3);
 		LLEG_J2.setServoID(4);
