@@ -4,7 +4,6 @@
 #include <rewa_msgs/WalkOutput.h>
 #include <ros/console.h>
 
-
 class WalkEngine {
 
 	private:
@@ -28,10 +27,10 @@ class WalkEngine {
 		
 		walk_output_pub = nh.advertise<rewa_msgs::WalkOutput>("/walk_output", 1);
 
-		params.distHipToKnee = 0.093;
-		params.distKneeToAnkle = 0.105;
-		params.distAnkleToGround = 0.032;
-		params.distFeetLateral = 0.092;
+		params.distHipToKnee = 0.010;
+		params.distKneeToAnkle = 0.010;
+		params.distAnkleToGround = 0.004;
+		params.distFeetLateral = 0.008;
 		params.freq = 1.7;
 		params.enabledGain = 1.0;
 		params.supportPhaseRatio = 0.0;
