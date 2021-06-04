@@ -29,7 +29,7 @@ add_custom_target(_rewa_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" NAME_WE)
 add_custom_target(_rewa_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rewa_msgs" "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" "rewa_msgs/LegJoint:rewa_msgs/Euler"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rewa_msgs" "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg" "rewa_msgs/Euler:rewa_msgs/LegJoint"
 )
 
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg" NAME_WE)
@@ -44,7 +44,7 @@ add_custom_target(_rewa_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg" NAME_WE)
 add_custom_target(_rewa_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rewa_msgs" "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg" "rewa_msgs/ControlCommandAX12A:rewa_msgs/ControlCommandMX28"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rewa_msgs" "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg" "rewa_msgs/ControlCommandMX28:rewa_msgs/ControlCommandAX12A"
 )
 
 #
@@ -68,7 +68,7 @@ _generate_msg_cpp(rewa_msgs
 _generate_msg_cpp(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rewa_msgs
 )
 _generate_msg_cpp(rewa_msgs
@@ -86,7 +86,7 @@ _generate_msg_cpp(rewa_msgs
 _generate_msg_cpp(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rewa_msgs
 )
 
@@ -141,7 +141,7 @@ _generate_msg_eus(rewa_msgs
 _generate_msg_eus(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rewa_msgs
 )
 _generate_msg_eus(rewa_msgs
@@ -159,7 +159,7 @@ _generate_msg_eus(rewa_msgs
 _generate_msg_eus(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rewa_msgs
 )
 
@@ -214,7 +214,7 @@ _generate_msg_lisp(rewa_msgs
 _generate_msg_lisp(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rewa_msgs
 )
 _generate_msg_lisp(rewa_msgs
@@ -232,7 +232,7 @@ _generate_msg_lisp(rewa_msgs
 _generate_msg_lisp(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rewa_msgs
 )
 
@@ -287,7 +287,7 @@ _generate_msg_nodejs(rewa_msgs
 _generate_msg_nodejs(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rewa_msgs
 )
 _generate_msg_nodejs(rewa_msgs
@@ -305,7 +305,7 @@ _generate_msg_nodejs(rewa_msgs
 _generate_msg_nodejs(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rewa_msgs
 )
 
@@ -360,7 +360,7 @@ _generate_msg_py(rewa_msgs
 _generate_msg_py(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rewa_msgs
 )
 _generate_msg_py(rewa_msgs
@@ -378,7 +378,7 @@ _generate_msg_py(rewa_msgs
 _generate_msg_py(rewa_msgs
   "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg"
   "${MSG_I_FLAGS}"
-  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg"
+  "/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg;/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rewa_msgs
 )
 

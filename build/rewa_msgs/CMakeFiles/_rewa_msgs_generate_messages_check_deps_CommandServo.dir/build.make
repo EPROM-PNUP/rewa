@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/wmhrdk/Dev/rewa/build
 include rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/progress.make
 
 rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo:
-	cd /home/wmhrdk/Dev/rewa/build/rewa_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rewa_msgs /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg rewa_msgs/ControlCommandAX12A:rewa_msgs/ControlCommandMX28
+	cd /home/wmhrdk/Dev/rewa/build/rewa_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rewa_msgs /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg rewa_msgs/ControlCommandMX28:rewa_msgs/ControlCommandAX12A
 
 _rewa_msgs_generate_messages_check_deps_CommandServo: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo
 _rewa_msgs_generate_messages_check_deps_CommandServo: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_CommandServo.dir/build.make

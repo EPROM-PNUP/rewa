@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/wmhrdk/Dev/rewa/devel/lib;/home/wmhrdk/Dev/rewa/devel/lib;/home/wmhrdk/Dev/ros_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/wmhrdk/Dev/rewa/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(rewa_motion_LIBRARIES ${rewa_motion_LIBRARIES})
 
   _list_append_unique(rewa_motion_LIBRARY_DIRS ${${rewa_motion_dep}_LIBRARY_DIRS})
-  list(APPEND rewa_motion_EXPORTED_TARGETS ${${rewa_motion_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(rewa_motion_EXPORTED_TARGETS ${${rewa_motion_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

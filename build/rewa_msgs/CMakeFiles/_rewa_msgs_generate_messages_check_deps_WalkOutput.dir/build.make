@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/wmhrdk/Dev/rewa/build
 include rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_WalkOutput.dir/progress.make
 
 rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_WalkOutput:
-	cd /home/wmhrdk/Dev/rewa/build/rewa_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rewa_msgs /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg rewa_msgs/LegJoint:rewa_msgs/Euler
+	cd /home/wmhrdk/Dev/rewa/build/rewa_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rewa_msgs /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg rewa_msgs/Euler:rewa_msgs/LegJoint
 
 _rewa_msgs_generate_messages_check_deps_WalkOutput: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_WalkOutput
 _rewa_msgs_generate_messages_check_deps_WalkOutput: rewa_msgs/CMakeFiles/_rewa_msgs_generate_messages_check_deps_WalkOutput.dir/build.make

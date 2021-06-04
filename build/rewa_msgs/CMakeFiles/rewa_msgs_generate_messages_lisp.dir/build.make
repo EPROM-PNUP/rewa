@@ -74,8 +74,8 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp: /home/wmhrdk/Dev/rewa/dev
 
 /home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/WalkOutput.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/WalkOutput.lisp: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg
-/home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/WalkOutput.lisp: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg
 /home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/WalkOutput.lisp: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/Euler.msg
+/home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/WalkOutput.lisp: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/LegJoint.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from rewa_msgs/WalkOutput.msg"
 	cd /home/wmhrdk/Dev/rewa/build/rewa_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/WalkOutput.msg -Irewa_msgs:/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rewa_msgs -o /home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg
 
@@ -91,8 +91,8 @@ rewa_msgs/CMakeFiles/rewa_msgs_generate_messages_lisp: /home/wmhrdk/Dev/rewa/dev
 
 /home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/CommandServo.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/CommandServo.lisp: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg
-/home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/CommandServo.lisp: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg
 /home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/CommandServo.lisp: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandMX28.msg
+/home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg/CommandServo.lisp: /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/ControlCommandAX12A.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wmhrdk/Dev/rewa/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from rewa_msgs/CommandServo.msg"
 	cd /home/wmhrdk/Dev/rewa/build/rewa_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/wmhrdk/Dev/rewa/src/rewa_msgs/msg/CommandServo.msg -Irewa_msgs:/home/wmhrdk/Dev/rewa/src/rewa_msgs/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p rewa_msgs -o /home/wmhrdk/Dev/rewa/devel/share/common-lisp/ros/rewa_msgs/msg
 
